@@ -1,0 +1,24 @@
+<script type="text/javascript">
+    RED.nodes.registerType('converter',{
+        category: 'PowerLogic',
+        color: '#009E4D',
+        defaults: {
+            name: {value:""},
+            unitId: {value: ""},
+            phase: {phase: ""},
+            data: {value: ""}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "logo.png",
+        align: 'right',
+        label: function() {
+            return this.name||"converter";
+        }
+    });
+</script>
+
+
+<script type="text/x-red" data-help-name="converter">
+    <p>This node receives the response from MODBUS device and changes the different format numbers to human readable.</p>
+</script>

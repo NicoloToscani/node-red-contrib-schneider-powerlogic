@@ -1,0 +1,57 @@
+<script type="text/javascript">
+    RED.nodes.registerType('iem3000',{
+        category: 'PowerLogic',
+        color: '#009E4D',
+        defaults: {
+            name: {value:""},
+            unitId: {value: "",required:true},
+            data: {value: "", required: true}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "serial.svg",
+        label: function() {
+            return this.name||"pm3000";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="iem3000">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-unitId"><i class="icon-tag"></i> Unit ID</label>
+        <input type="text" id="node-input-unitId" placeholder=" 123">
+    </div>
+    <div class="form-row">
+       <label for="node-input-data"><i class="icon-list"></i> Measure</label>
+       <select id="node-input-data">
+           <option value="current-P1">I1: phase 1 current</option>
+           <option value="current-P2">I2: phase 2 current</option>
+           <option value="current-P3">I3: phase 3 current</option>
+           <option value="current-avg">I Avg: current Avg</option>
+           <option value="voltage-L1L2">Voltage L1-L2</option>
+           <option value="voltage-L2L3">Voltage L2-L3</option>
+           <option value="voltage-L3L1">Voltage L3-L1</option>
+           <option value="voltage-LL-Avg">Voltage L-L Avg</option>
+           <option value="voltage-L1N">Voltage L1-N</option>
+           <option value="voltage-L2N">Voltage L2-N</option>
+           <option value="voltage-L3N">Voltage L3-N</option>
+           <option value="voltage-LN-avg">Voltage L-N Avg</option>
+           <option value="actPowerP1">Active Power Phase 1</option>
+           <option value="actPowerP2">Active Power Phase 2</option>
+           <option value="actPowerP3">Active Power Phase 3</option>
+           <option value="actPowerTot">Total Active Power</option>
+           <option value="pFactorTot">Power Factor Total</option>
+           <option value="frequency">Frequency</option>
+           <option value="toEnergyActImp">Total Active Energy Import</option>
+       </select>
+   </div>
+  
+</script>
+
+<script type="text/x-red" data-help-name="iem3000">
+    <p>This node resumes the configuration parameters that are necessary to poll a Schneider iem3000 series over Modbus TCP/IP. To use this node:<br>1. Enter Unit ID corresponding to the configured Unit ID in the Gateway.<br>2. Select which reading you'd like to measure.<br>3. Add more node to select more data.</p>
+</script>
