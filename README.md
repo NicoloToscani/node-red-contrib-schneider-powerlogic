@@ -24,7 +24,7 @@ Use the `converter` node to convert the values from the modbus response into hum
 Wire the second output of the `Modbus Flex Getter` to the input of the `converter`.
 
 ## Usage
-List of pm3000 / pm5000 meter data:
+List of **pm3000/pm5000** meter data:
 
 | Measure                            | Units                 | Type          | 
 | ---------------------------------- | --------------------- | ------------- | 
@@ -79,7 +79,7 @@ List of pm3000 / pm5000 meter data:
 |  Total apparent energy import      | VAh                   | Int64         |
 |  Total apparent energy export      | VAh                   | Int64         |
 
-List of iem3000 meter data:
+List of **iem3000** meter data:
 
 | Measure                            | Units                 | Type          | 
 | ---------------------------------- | --------------------- | ------------- | 
