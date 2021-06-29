@@ -36,5 +36,8 @@
     "type": "git",
     "url": "git+https://github.com/NicoloToscani/node-red-contrib-schneider-powerlogic.git"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "directories": {
+    "doc": "docs"
+  }
 }
