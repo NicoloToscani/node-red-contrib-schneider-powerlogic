@@ -1,0 +1,104 @@
+<script type="text/javascript">
+    RED.nodes.registerType('pm3000',{
+        category: 'PowerLogic',
+        color: '#009E4D',
+        defaults: {
+            name: {value:""},
+            unitId: {value: "",required:true},
+            data: {value: "", required: true}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "serial.svg",
+        label: function() {
+            return this.name||"pm3000";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="pm3000">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-unitId"><i class="icon-tag"></i> Unit ID</label>
+        <input type="text" id="node-input-unitId" placeholder=" 123">
+    </div>
+    <div class="form-row">
+       <label for="node-input-data"><i class="icon-list"></i> Measure</label>
+       <select id="node-input-data">
+           <option value="current-P1">I1: phase 1 current</option>
+           <option value="current-P2">I2: phase 2 current</option>
+           <option value="current-P3">I3: phase 3 current</option>
+           <option value="current-In">In: neutral current</option>
+           <option value="current-avg">I Avg: current Avg</option>
+           <option value="voltage-L1L2">Voltage L1-L2</option>
+           <option value="voltage-L2L3">Voltage L2-L3</option>
+           <option value="voltage-L3L1">Voltage L3-L1</option>
+           <option value="voltage-LL-Avg">Voltage L-L Avg</option>
+           <option value="voltage-L1N">Voltage L1-N</option>
+           <option value="voltage-L2N">Voltage L2-N</option>
+           <option value="voltage-L3N">Voltage L3-N</option>
+           <option value="voltage-LN-avg">Voltage L-N Avg</option>
+           <option value="actPowerP1">Active Power Phase 1</option>
+           <option value="actPowerP2">Active Power Phase 2</option>
+           <option value="actPowerP3">Active Power Phase 3</option>
+           <option value="actPowerTot">Total Active Power</option>
+           <option value="reactPowerP1">Reactive Power Phase 1</option>
+           <option value="reactPowerP2">Reactive Power Phase 2</option>
+           <option value="reactPowerP3">Reactive Power Phase 3</option>
+           <option value="reactPowerTot">Total Reactive Power</option>
+           <option value="appPowerP1">Apparent Power Phase 1</option>
+           <option value="appPowerP2">Apparent Power Phase 2</option>
+           <option value="appPowerP3">Apparent Power Phase 3</option>
+           <option value="appPowerTot">Total Apparent Power</option>
+           <option value="pFactorP1">Power Factor Phase 1</option>
+           <option value="pFactorP2">Power Factor Phase 2</option>
+           <option value="pFactorP3">Power Factor Phase 3</option>
+           <option value="pFactorTot">Power Factor Total</option>
+           <option value="currentUnI1">Current Unbalance I1</option>
+           <option value="currentUnI2">Current Unbalance I2</option>
+           <option value="currentUnI3">Current Unbalance I3</option>
+           <option value="currentUnWst">Current Unbalance Worst</option>
+           <option value="voltageUnL1L2">Voltage Unbalance L1-L2</option>
+           <option value="voltageUnL2L3">Voltage Unbalance L2-L3</option>
+           <option value="voltageUnL3L1">Voltage Unbalance L3-L1</option>
+           <option value="voltageUnLLWst">Voltage Unbalance L-L Worst</option>
+           <option value="voltageUnL1N">Voltage Unbalance L1-N</option>
+           <option value="voltageUnL2N">Voltage Unbalance L2-N</option>
+           <option value="voltageUnL3N">Voltage Unbalance L3-N</option>
+           <option value="voltageUnLNWst">Voltage Unbalance L-N Worst</option>
+           <option value="tangentPhi">Tangent Phi Total</option>
+           <option value="frequency">Frequency</option>
+           <option value="temperature">Temperature</option>
+           <option value="toEnergyActImp">Total Active Energy Import</option>
+           <option value="toEnergyActExp">Total Active Energy Export</option>
+           <option value="toEnergyReactImp">Total Reactive Energy Import</option>
+           <option value="toEnergyReactExp">Total Reactive Energy Export</option>
+           <option value="toEnergyAppImp">Total Apparent Energy Import</option>
+           <option value="toEnergyAppExp">Total Apparent Energy Export</option>
+           <option value="paEnergyActImp">Partial Active Energy Import</option>
+           <option value="paEnergyReactImp">Partial Reactive Energy Import</option>
+           <option value="paEnergyAppImp">Partial Apparent Energy Import</option>
+           <option value="activeEnergyImpP1">Active Energy Import Phase 1</option>
+           <option value="activeEnergyImpP2">Active Energy Import Phase 2</option>
+           <option value="activeEnergyImpP3">Active Energy Import Phase 3</option>
+           <option value="reactiveEnergyImpP1">Reactive Energy Import Phase 1</option>
+           <option value="reactiveEnergyImpP2">Reactive Energy Import Phase 2</option>
+           <option value="reactiveEnergyImpP3">Reactive Energy Import Phase 3</option>
+           <option value="apparentEnergyImpP1">Apparent Energy Import Phase 1</option>
+           <option value="apparentEnergyImpP2">Apparent Energy Import Phase 2</option>
+           <option value="apparentEnergyImpP3">Apparent Energy Import Phase 3</option>
+           <option value="toEnergyActImpRate1">Rate 1 Active Energy Import</option>
+           <option value="toEnergyActImpRate2">Rate 2 Active Energy Import</option>
+           <option value="toEnergyActImpRate3">Rate 3 Active Energy Import</option>
+           <option value="toEnergyActImpRate4">Rate 4 Active Energy Import</option>
+       </select>
+   </div>
+  
+</script>
+
+<script type="text/x-red" data-help-name="pm3000">
+    <p>This node resumes the configuration parameters that are necessary to poll a Schneider PM3000 series over Modbus TCP/IP. To use this node:<br>1. Enter Unit ID corresponding to the configured Unit ID in the Gateway.<br>2. Select which reading you'd like to measure.<br>3. Add more node to select more data.</p>
+</script>
