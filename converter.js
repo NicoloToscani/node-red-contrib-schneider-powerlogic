@@ -8,14 +8,9 @@ module.exports = function(RED) {
         node.on('input', function(msg) {
         switch(msg.format) {
             case "float32":
-                
-                if(msg.model == "pm3000" || msg.model == "iem3000"){
+                if(msg.model == "pm3000" || msg.model == "iem3000" || msg.model == "pm5000" ){
                    msg.payload = msg.payload.buffer.readFloatBE(0,4).toFixed(2);
                 } 
-                
-                else if(msg.model == "pm5000"){
-                    msg.payload = msg.payload.buffer.readFloatLE(0,4).toFixed(2);
-                }
                 
                 if(msg.topic != "pFactorTot"){
                    node.send(msg);
@@ -66,11 +61,17 @@ module.exports = function(RED) {
                 
             break;
             case "uint32":
-                msg.payload = msg.payload.buffer.readUInt32LE(0,4).toFixed(2);
+                if(msg.model == "pm3000" || msg.model == "iem3000" || msg.model == "pm5000" ){
+                
+                   msg.payload = msg.payload.buffer.readUInt32BE(0,4).toFixed(2);
+                }
                 node.send(msg);
             break;
             case "int64":
-                msg.payload = msg.payload.buffer.readBigInt64LE(0);
+                if(msg.model == "pm3000" || msg.model == "iem3000" || msg.model == "pm5000" ){
+                
+                   msg.payload = msg.payload.buffer.readBigInt64BE(0);
+                }
                 node.send(msg);
             break;
             default:
