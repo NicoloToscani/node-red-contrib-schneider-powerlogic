@@ -86,6 +86,7 @@ List of **iEM3000** meter data:
 |  I1: phase 1 current               | A                     | Float32       | 
 |  I2: phase 2 current               | A                     | Float32       |
 |  I3: phase 3 current               | A                     | Float32       |
+|  Current Avg                       | A                     | Float32       |
 |  Voltage L1-L2                     | V                     | Float32       |
 |  Voltage L2-L3                     | V                     | Float32       |
 |  Voltage L3-L1                     | V                     | Float32       |
