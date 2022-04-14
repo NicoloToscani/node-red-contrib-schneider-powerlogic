@@ -12,9 +12,9 @@ Alternatively, run the following command in your Node-RED user directory - typic
 ## How to use
 
 ### meter node
-Use the `pm3000`, `pm5000` or `iem3000` node to configure which information you want to request from the gateway.
+Use the `pm3000`, `pm5000`, `iem3000` or `powertag` node to configure which information you want to request from the gateway.
 
-Wire the output of the `pm3000`, `pm5000` or `iem3000` to the input of the `Modbus Flex Getter` from 'node-red-contrib-modbus' modules.
+Wire the output of the `pm3000`, `pm5000`, `iem3000` or `powertag` to the input of the `Modbus Flex Getter` from 'node-red-contrib-modbus' modules.
 
 Enable check box `Keep Msg Properties` in the `Modbus Flex Getter` properties.
 
