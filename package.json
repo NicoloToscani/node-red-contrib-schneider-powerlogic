@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-schneider-powerlogic",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A node-RED nodes to read Schneider PowerLogic series over Modbus TCP/IP.",
   "author": "Nicolò Toscani",
   "license": "MIT",
@@ -9,6 +9,7 @@
       "pm3000": "pm3000.js",
       "pm5000": "pm5000.js",
       "iem300": "iem3000.js",
+      "powertag": "powertag.js",
       "converter": "converter.js"
     }
   },
@@ -22,6 +23,7 @@
     "pm3000",
     "pm5000",
     "iem300",
+    "powertag",
     "energymeter",
     "modbus",
     "iot",
