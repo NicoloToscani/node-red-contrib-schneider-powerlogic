@@ -123,74 +123,98 @@ List of **iEM3000** meter data:
 
 **PowerTag Energy x63** (A9MEM152x, A9MEM154x, A9MEM156x, and A9MEM157x)
 
-| Measure                                       | Units                 | Type          | 
-| --------------------------------------------- | --------------------- | ------------- | 
-|  RMS current on phase A                       | A                     | Float32       | 
-|  RMS current on phase B                       | A                     | Float32       |
-|  RMS current on phase C                       | A                     | Float32       |
-|  RMS phase-to-phase voltage A-B               | V                     | Float32       |
-|  RMS phase-to-phase voltage B-C               | V                     | Float32       |
-|  RMS phase-to-neutral voltage A-N             | V                     | Float32       |
-|  RMS phase-to-neutral voltage B-N             | V                     | Float32       |
-|  RMS phase-to-neutral voltage C-N             | V                     | Float32       |
-|  Active power phase A                         | W                     | Float32       |
-|  Active power phase B                         | W                     | Float32       |
-|  Active power phase C                         | W                     | Float32       |
-|  Total active power                           | W                     | Float32       |
-|  Total apparent power                         | VA                    | Float32       |
-|  Total power factor                           |                       | Float32       |
-|  Total active energy delivered + received     | Wh                    | Int64         |
-|  Partial active energy delivered + received   | Wh                    | Int64         |
-|  Damand total active power                    | Wh                    | Float32       |
-|  Maximum demand total active power            | Wh                    | Float32       |
+| Measure                                            | Units                 | Type          | 
+| -------------------------------------------------- | --------------------- | ------------- | 
+|  RMS current on phase A                            | A                     | Float32       | 
+|  RMS current on phase B                            | A                     | Float32       |
+|  RMS current on phase C                            | A                     | Float32       |
+|  RMS phase-to-phase voltage A-B                    | V                     | Float32       |
+|  RMS phase-to-phase voltage B-C                    | V                     | Float32       |
+|  RMS phase-to-neutral voltage A-N                  | V                     | Float32       |
+|  RMS phase-to-neutral voltage B-N                  | V                     | Float32       |
+|  RMS phase-to-neutral voltage C-N                  | V                     | Float32       |
+|  Active power phase A                              | W                     | Float32       |
+|  Active power phase B                              | W                     | Float32       |
+|  Active power phase C                              | W                     | Float32       |
+|  Total active power                                | W                     | Float32       |
+|  Total apparent power                              | VA                    | Float32       |
+|  Total power factor                                |                       | Float32       |
+|  Total active energy delivered + received          | Wh                    | Int64         |
+|  Partial active energy delivered + received        | Wh                    | Int64         |
+|  Damand total active power                         | Wh                    | Float32       |
+|  Maximum demand total active power                 | Wh                    | Float32       |
 
-**PowerTag Energy M250/M630** ((LV43402x)
+**PowerTag Energy M250/M630** (LV43402x)
 
-| Measure                            | Units                 | Type          | 
-| ---------------------------------- | --------------------- | ------------- | 
-|  I1: phase 1 current               | A                     | Float32       | 
-|  I2: phase 2 current               | A                     | Float32       |
-|  I3: phase 3 current               | A                     | Float32       |
-|  Current Avg                       | A                     | Float32       |
-|  Voltage L1-L2                     | V                     | Float32       |
-|  Voltage L2-L3                     | V                     | Float32       |
-|  Voltage L3-L1                     | V                     | Float32       |
-|  Voltage L-L Avg                   | V                     | Float32       |
-|  Voltage L1-N                      | V                     | Float32       |
-|  Voltage L2-N                      | V                     | Float32       |
-|  Voltage L3-N                      | V                     | Float32       |
-|  Voltage L-N Avg                   | V                     | Float32       |
-|  Active power phase 1              | kW                    | Float32       |
-|  Active power phase 2              | kW                    | Float32       |
-|  Active power phase 3              | kW                    | Float32       |
-|  Total active power                | kW                    | Float32       |
-|  Power factor total                | -                     | Float32       |
-|  Frequency                         | Hz                    | Float32       |
-|  Total active energy import        | Wh                    | Int64         |
+| Measure                                            | Units                 | Type          | 
+| -------------------------------------------------- | --------------------- | ------------- | 
+|  RMS current on phase A                            | A                     | Float32       | 
+|  RMS current on phase B                            | A                     | Float32       |
+|  RMS current on phase C                            | A                     | Float32       |
+|  RMS phase-to-phase voltage A-B                    | V                     | Float32       |
+|  RMS phase-to-phase voltage B-C                    | V                     | Float32       |
+|  RMS phase-to-neutral voltage A-N                  | V                     | Float32       |
+|  RMS phase-to-neutral voltage B-N                  | V                     | Float32       |
+|  RMS phase-to-neutral voltage C-N                  | V                     | Float32       |
+|  Active power phase A                              | W                     | Float32       |
+|  Active power phase B                              | W                     | Float32       |
+|  Active power phase C                              | W                     | Float32       |
+|  Total active power                                | W                     | Float32       |
+|  Total reactive power                              | VAR                   | Float32       |
+|  Total apparent power                              | VA                    | Float32       |
+|  Total power factor                                |                       | Float32       |
+|  Frequency                                         | Hz                    | Float32       |
+|  Device temperature                                | °C                    | Float32       |
+|  Total active energy delivered count positively    | Wh                    | Int64         |
+|  Total active energy received                      | Wh                    | Int64         |
+|  Active energy phase A delivered                   | Wh                    | Int64         |
+|  Active energy phase B delivered                   | Wh                    | Int64         |
+|  Active energy phase C delivered                   | Wh                    | Int64         |
+|  Partial active energy delivered                   | Wh                    | Int64         |
+|  Partial active energy receivede                   | Wh                    | Int64         |
+|  Partial reactive energy delivered                 | VARh                  | Int64         |
+|  Partial reactive energy received                  | VARh                  | Int64         |
 
-**PowerTag Energy F160 and Rope** ((LV43402x)
+**PowerTag Energy F160 and Rope** (LV43402x)
 
-| Measure                            | Units                 | Type          | 
-| ---------------------------------- | --------------------- | ------------- | 
-|  I1: phase 1 current               | A                     | Float32       | 
-|  I2: phase 2 current               | A                     | Float32       |
-|  I3: phase 3 current               | A                     | Float32       |
-|  Current Avg                       | A                     | Float32       |
-|  Voltage L1-L2                     | V                     | Float32       |
-|  Voltage L2-L3                     | V                     | Float32       |
-|  Voltage L3-L1                     | V                     | Float32       |
-|  Voltage L-L Avg                   | V                     | Float32       |
-|  Voltage L1-N                      | V                     | Float32       |
-|  Voltage L2-N                      | V                     | Float32       |
-|  Voltage L3-N                      | V                     | Float32       |
-|  Voltage L-N Avg                   | V                     | Float32       |
-|  Active power phase 1              | kW                    | Float32       |
-|  Active power phase 2              | kW                    | Float32       |
-|  Active power phase 3              | kW                    | Float32       |
-|  Total active power                | kW                    | Float32       |
-|  Power factor total                | -                     | Float32       |
-|  Frequency                         | Hz                    | Float32       |
-|  Total active energy import        | Wh                    | Int64         |
+| Measure                                            | Units                 | Type          | 
+| -------------------------------------------------- | --------------------- | ------------- | 
+|  RMS current on phase A                            | A                     | Float32       | 
+|  RMS current on phase B                            | A                     | Float32       |
+|  RMS current on phase C                            | A                     | Float32       |
+|  RMS current on neutral                            | A                     | Float32       |
+|  RMS phase-to-phase voltage A-B                    | V                     | Float32       |
+|  RMS phase-to-phase voltage B-C                    | V                     | Float32       |
+|  RMS phase-to-neutral voltage A-N                  | V                     | Float32       |
+|  RMS phase-to-neutral voltage B-N                  | V                     | Float32       |
+|  RMS phase-to-neutral voltage C-N                  | V                     | Float32       |
+|  Active power phase A                              | W                     | Float32       |
+|  Active power phase B                              | W                     | Float32       |
+|  Active power phase C                              | W                     | Float32       |
+|  Total active power                                | W                     | Float32       |
+|  Reactive power phase A                            | VAR                   | Float32       |
+|  Reactive power phase B                            | VAR                   | Float32       |
+|  Reactive power phase C                            | VAR                   | Float32       |
+|  Total reactive power                              | VAR                   | Float32       |
+|  Apparent power phase A                            | VA                    | Float32       |
+|  Apparent power phase B                            | VA                    | Float32       |
+|  Apparent power phase C                            | VA                    | Float32       |
+|  Total apparent power                              | VA                    | Float32       |
+|  Power factor phase A                              |                       | Float32       |
+|  Power factor phase B                              |                       | Float32       |
+|  Power factor phase C                              |                       | Float32       |
+|  Total power factor                                |                       | Float32       |
+|  Power factor sign convention   0 = IEC; 1 = IEE   |                       | Int16         |
+|  Frequency                                         | Hz                    | Float32       |
+|  Device temperature                                | °C                    | Float32       |
+|  Total active energy delivered count positively    | Wh                    | Int64         |
+|  Total active energy received                      | Wh                    | Int64         |
+|  Partial active energy receivede                   | Wh                    | Int64         |
+|  Partial reactive energy delivered                 | VARh                  | Int64         |
+|  Partial reactive energy received                  | VARh                  | Int64         |
+|  Damand total active power                         | Wh                    | Float32       |
+|  Maximum demand total active power                 | Wh                    | Float32       |
+
 
 ### Meter data 
 ![data-config](docs/data-config.png)
