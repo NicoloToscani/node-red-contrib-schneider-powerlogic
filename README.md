@@ -119,6 +119,79 @@ List of **iEM3000** meter data:
 |  Frequency                         | Hz                    | Float32       |
 |  Total active energy import        | Wh                    | Int64         |
 
+List of **PowerTag Energy Sensors** meter data:
+**PowerTag Energy x63** (A9MEM152x, A9MEM154x, A9MEM156x, and A9MEM157x)
+
+| Measure                            | Units                 | Type          | 
+| ---------------------------------- | --------------------- | ------------- | 
+|  I1: phase 1 current               | A                     | Float32       | 
+|  I2: phase 2 current               | A                     | Float32       |
+|  I3: phase 3 current               | A                     | Float32       |
+|  Current Avg                       | A                     | Float32       |
+|  Voltage L1-L2                     | V                     | Float32       |
+|  Voltage L2-L3                     | V                     | Float32       |
+|  Voltage L3-L1                     | V                     | Float32       |
+|  Voltage L-L Avg                   | V                     | Float32       |
+|  Voltage L1-N                      | V                     | Float32       |
+|  Voltage L2-N                      | V                     | Float32       |
+|  Voltage L3-N                      | V                     | Float32       |
+|  Voltage L-N Avg                   | V                     | Float32       |
+|  Active power phase 1              | kW                    | Float32       |
+|  Active power phase 2              | kW                    | Float32       |
+|  Active power phase 3              | kW                    | Float32       |
+|  Total active power                | kW                    | Float32       |
+|  Power factor total                | -                     | Float32       |
+|  Frequency                         | Hz                    | Float32       |
+|  Total active energy import        | Wh                    | Int64         |
+
+**PowerTag Energy M250/M630** ((LV43402x)
+
+| Measure                            | Units                 | Type          | 
+| ---------------------------------- | --------------------- | ------------- | 
+|  I1: phase 1 current               | A                     | Float32       | 
+|  I2: phase 2 current               | A                     | Float32       |
+|  I3: phase 3 current               | A                     | Float32       |
+|  Current Avg                       | A                     | Float32       |
+|  Voltage L1-L2                     | V                     | Float32       |
+|  Voltage L2-L3                     | V                     | Float32       |
+|  Voltage L3-L1                     | V                     | Float32       |
+|  Voltage L-L Avg                   | V                     | Float32       |
+|  Voltage L1-N                      | V                     | Float32       |
+|  Voltage L2-N                      | V                     | Float32       |
+|  Voltage L3-N                      | V                     | Float32       |
+|  Voltage L-N Avg                   | V                     | Float32       |
+|  Active power phase 1              | kW                    | Float32       |
+|  Active power phase 2              | kW                    | Float32       |
+|  Active power phase 3              | kW                    | Float32       |
+|  Total active power                | kW                    | Float32       |
+|  Power factor total                | -                     | Float32       |
+|  Frequency                         | Hz                    | Float32       |
+|  Total active energy import        | Wh                    | Int64         |
+
+**PowerTag Energy F160 and Rope** ((LV43402x)
+
+| Measure                            | Units                 | Type          | 
+| ---------------------------------- | --------------------- | ------------- | 
+|  I1: phase 1 current               | A                     | Float32       | 
+|  I2: phase 2 current               | A                     | Float32       |
+|  I3: phase 3 current               | A                     | Float32       |
+|  Current Avg                       | A                     | Float32       |
+|  Voltage L1-L2                     | V                     | Float32       |
+|  Voltage L2-L3                     | V                     | Float32       |
+|  Voltage L3-L1                     | V                     | Float32       |
+|  Voltage L-L Avg                   | V                     | Float32       |
+|  Voltage L1-N                      | V                     | Float32       |
+|  Voltage L2-N                      | V                     | Float32       |
+|  Voltage L3-N                      | V                     | Float32       |
+|  Voltage L-N Avg                   | V                     | Float32       |
+|  Active power phase 1              | kW                    | Float32       |
+|  Active power phase 2              | kW                    | Float32       |
+|  Active power phase 3              | kW                    | Float32       |
+|  Total active power                | kW                    | Float32       |
+|  Power factor total                | -                     | Float32       |
+|  Frequency                         | Hz                    | Float32       |
+|  Total active energy import        | Wh                    | Int64         |
+
 ### Meter data 
 ![data-config](docs/data-config.png)
 
