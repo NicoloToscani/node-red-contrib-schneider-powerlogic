@@ -119,6 +119,8 @@ List of **iEM3000** meter data:
 |  Frequency                         | Hz                    | Float32       |
 |  Total active energy import        | Wh                    | Int64         |
 
+### PowerTag Energy Sensors
+
 List of **PowerTag Energy Sensors** meter data:
 
 **PowerTag Energy x63** (A9MEM152x, A9MEM154x, A9MEM156x, and A9MEM157x)
