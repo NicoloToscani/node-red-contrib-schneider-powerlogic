@@ -1,5 +1,5 @@
 # node-red-contrib-schneider-powerlogic
-A Node-RED nodes to read Schneider PowerLogic series over Modbus TCP/IP
+A Node-RED nodes to read Schneider PowerLogic series over Modbus TCP/IP.
 ## Node-RED configurator to read Schneider PowerLogic series over Modbus TCP/IP through Ethernet gateway
 
 ## Install
