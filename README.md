@@ -123,27 +123,26 @@ List of **iEM3000** meter data:
 
 **PowerTag Energy x63** (A9MEM152x, A9MEM154x, A9MEM156x, and A9MEM157x)
 
-| Measure                            | Units                 | Type          | 
-| ---------------------------------- | --------------------- | ------------- | 
-|  I1: phase 1 current               | A                     | Float32       | 
-|  I2: phase 2 current               | A                     | Float32       |
-|  I3: phase 3 current               | A                     | Float32       |
-|  Current Avg                       | A                     | Float32       |
-|  Voltage L1-L2                     | V                     | Float32       |
-|  Voltage L2-L3                     | V                     | Float32       |
-|  Voltage L3-L1                     | V                     | Float32       |
-|  Voltage L-L Avg                   | V                     | Float32       |
-|  Voltage L1-N                      | V                     | Float32       |
-|  Voltage L2-N                      | V                     | Float32       |
-|  Voltage L3-N                      | V                     | Float32       |
-|  Voltage L-N Avg                   | V                     | Float32       |
-|  Active power phase 1              | kW                    | Float32       |
-|  Active power phase 2              | kW                    | Float32       |
-|  Active power phase 3              | kW                    | Float32       |
-|  Total active power                | kW                    | Float32       |
-|  Power factor total                | -                     | Float32       |
-|  Frequency                         | Hz                    | Float32       |
-|  Total active energy import        | Wh                    | Int64         |
+| Measure                                       | Units                 | Type          | 
+| --------------------------------------------- | --------------------- | ------------- | 
+|  RMS current on phase A                       | A                     | Float32       | 
+|  RMS current on phase B                       | A                     | Float32       |
+|  RMS current on phase C                       | A                     | Float32       |
+|  RMS phase-to-phase voltage A-B               | V                     | Float32       |
+|  RMS phase-to-phase voltage B-C               | V                     | Float32       |
+|  RMS phase-to-neutral voltage A-N             | V                     | Float32       |
+|  RMS phase-to-neutral voltage B-N             | V                     | Float32       |
+|  RMS phase-to-neutral voltage C-N             | V                     | Float32       |
+|  Active power phase A                         | W                     | Float32       |
+|  Active power phase B                         | W                     | Float32       |
+|  Active power phase C                         | W                     | Float32       |
+|  Total active power                           | W                     | Float32       |
+|  Total apparent power                         | VA                    | Float32       |
+|  Total power factor                           |                       | Float32       |
+|  Total active energy delivered + received     | Wh                    | Int64         |
+|  Partial active energy delivered + received   | Wh                    | Int64         |
+|  Damand total active power                    | Wh                    | Float32       |
+|  Maximum demand total active power            | Wh                    | Float32       |
 
 **PowerTag Energy M250/M630** ((LV43402x)
 
