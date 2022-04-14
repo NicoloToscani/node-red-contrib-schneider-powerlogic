@@ -78,6 +78,22 @@ List of **PM3000/PM5000** meter data:
 |  Total reactive energy export      | VARh                  | Int64         |
 |  Total apparent energy import      | VAh                   | Int64         |
 |  Total apparent energy export      | VAh                   | Int64         |
+|  Partial active energy import      | Wh                    | Int64         |
+|  Partial reactive energy import    | VARh                  | Int64         |
+|  Partial apparent energy import    | VAh                   | Int64         |
+|  Active energy import phase 1      | Wh                    | Int64         |
+|  Active energy import phase 2      | Wh                    | Int64         |
+|  Active energy import phase 3      | Wh                    | Int64         |
+|  Reactive energy import phase 1    | VARh                  | Int64         |
+|  Reactive energy import phase 2    | VARh                  | Int64         |
+|  Reactive energy import phase 3    | VARh                  | Int64         |
+|  Apparent energy import phase 1    | VAh                   | Int64         |
+|  Apparent energy import phase 2    | VAh                   | Int64         |
+|  Apparent energy import phase 3    | VAh                   | Int64         |
+|  Rate 1 active energy import       | Wh                    | Int64         |
+|  Rate 2 active energy import       | Wh                    | Int64         |
+|  Rate 3 active energy import       | Wh                    | Int64         |
+|  Rate 4 active energy import       | Wh                    | Int64         |
 
 List of **iEM3000** meter data:
 
