@@ -8,7 +8,7 @@ module.exports = function(RED) {
         node.on('input', function(msg) {
         switch(msg.format) {
             case "float32":
-                if(msg.model == "pm3000" || msg.model == "iem3000" || msg.model == "pm5000" ){
+                if(msg.model == "pm3000" || msg.model == "iem3000" || msg.model == "pm5000" || msg.model == "x63" || msg.model == "M250_M630" || msg.model == "f160_rope"){
                    msg.payload = msg.payload.buffer.readFloatBE(0,4).toFixed(2);
                 } 
                 
@@ -61,16 +61,23 @@ module.exports = function(RED) {
                 
             break;
             case "uint32":
-                if(msg.model == "pm3000" || msg.model == "iem3000" || msg.model == "pm5000" ){
+                if(msg.model == "pm3000" || msg.model == "iem3000" || msg.model == "pm5000" || msg.model == "x63" || msg.model == "M250_M630" || msg.model == "f160_rope" ){
                 
                    msg.payload = msg.payload.buffer.readUInt32BE(0,4).toFixed(2);
                 }
                 node.send(msg);
             break;
             case "int64":
-                if(msg.model == "pm3000" || msg.model == "iem3000" || msg.model == "pm5000" ){
+                if(msg.model == "pm3000" || msg.model == "iem3000" || msg.model == "pm5000" || msg.model == "x63" || msg.model == "M250_M630" || msg.model == "f160_rope" ){
                 
                    msg.payload = msg.payload.buffer.readBigInt64BE(0);
+                }
+                node.send(msg);
+            break;
+            case "int16":
+                if(msg.model == "pm3000" || msg.model == "iem3000" || msg.model == "pm5000" || msg.model == "x63" || msg.model == "M250_M630" || msg.model == "f160_rope" ){
+                
+                   msg.payload = msg.payload.buffer.readInt16LE(0);
                 }
                 node.send(msg);
             break;

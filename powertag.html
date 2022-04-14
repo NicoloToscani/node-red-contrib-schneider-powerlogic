@@ -1,0 +1,225 @@
+<script type="text/javascript">
+    RED.nodes.registerType('powertag',{
+        category: 'PowerLogic',
+        color: '#009999',
+        defaults: {
+            name: {value:""},
+            unitId: {value: "1",required:true},
+            device: {value: "",required:true},
+            data: {value: "", required: true}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "serial.png",
+        label: function() {
+            return this.name||"powertag";
+        },
+        <!--When the config screen is opened-->
+        oneditprepare: function() {
+            
+            <!--Previous data set-->
+            const myData = this.data;
+            
+            $("#node-input-device").on("change",function() {
+                
+                if (this.value === "") {
+                    $("#node-input-data-energy-x63").hide();
+                    $("#node-input-data-energy-m250-m630").hide();
+                    $("#node-input-data-energy-f160-rope").hide();
+                } 
+                
+                else if (this.value === "powertag-energy-x63") {
+                    $("#node-input-data-energy-x63").show();
+                    $("#node-input-data-energy-m250-m630").hide();
+                    $("#node-input-data-energy-f160-rope").hide();
+                    $("#node-input-data-energy-x63 option[value=" +  myData + "]").attr("selected", true); 
+                } 
+                else if (this.value === "powertag-energy-m250-m630") {
+                    $("#node-input-data-energy-x63").hide();
+                    $("#node-input-data-energy-m250-m630").show();
+                    $("#node-input-data-energy-f160-rope").hide();  
+                    $("#node-input-data-energy-m250-m630 option[value=" +  myData + "]").attr("selected", true); 
+                } 
+                
+                else if (this.value === "powertag-energy-f16-rope") {
+                    $("#node-input-data-energy-x63").hide();
+                    $("#node-input-data-energy-m250-m630").hide();
+                    $("#node-input-data-energy-f160-rope").show();  
+                    $("#node-input-data-energy-f160-rope option[value=" +  myData + "]").attr("selected", true); 
+                    
+                } 
+            
+                
+            }).trigger("change");
+        }, 
+        
+        <!--When the config screen is closed ('done' button)-->
+        oneditsave: function () {
+        
+             <!--Check wich device type is selected-->
+             let deviceType = $("#node-input-device option:selected");
+             
+                    <!--PowerTag Energy x63-->
+                    if(deviceType.val() == "PowerTag Energy x63") {
+                        
+                        let dataValue = $("#node-input-data-energy-x63 option:selected");
+                        this.data = dataValue.val();
+              
+                    } 
+                    
+                    <!--PowerTag Energy M250/M630-->
+                    if(deviceType.val() == "PowerTag Energy M250/M630") {
+                        
+                        let dataValue = $("#node-input-data-energy-m250-m630 option:selected");
+                        this.data = dataValue.val();
+                        
+                    } 
+                    
+                    <!--PowerTag Energy F160/Rope-->
+                    if(deviceType.val() == "PowerTag Energy F160/Rope") {
+                        
+                        let dataValue = $("#node-input-data-energy-f160-rope option:selected");
+                        this.data = dataValue.val();
+                        
+                    } 
+                    
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="powertag">
+        
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-unitId"><i class="icon-tag"></i> Unit ID</label>
+        <input type="text" id="node-input-unitId" placeholder=" 123">
+    </div>
+    <div class="form-row">
+        <label for="node-input-device"><i class="icon-tag"></i> Device</label>
+        <select id="node-input-device" name="node-input-device">
+           <option value="powertag-energy-x63">PowerTag Energy x63</option>
+           <option value="powertag-energy-m250-m630">PowerTag Energy M250/M630</option>
+           <option value="powertag-energy-f16-rope">PowerTag Energy F160/Rope</option>
+        </select>
+    </div>
+    
+    <div id="node-input-data-energy-x63" class="form-row">
+       <label for="node-input-data-energy-x63"><i class="icon-list"></i> powertag</label>
+       <select id="node-input-data-energy-x63">
+           <option value="rms-current-phase-a">RMS current phase A</option>
+           <option value="rms-current-phase-b">RMS current phase B</option>
+           <option value="rms-current-phase-c">RMS current phase C</option>        
+           <option value="rms-voltage-a-b">RMS phase-to-phase voltage A-B</option>
+           <option value="rms-voltage-b-c">RMS phase-to-phase voltage B-C</option>
+           <option value="rms-voltage-c-a">RMS phase-to-phase voltage C-A</option>
+           <option value="rms-voltage-a-n">RMS phase-to-neutral voltage A-N</option>
+           <option value="rms-voltage-b-n">RMS phase-to-neutral voltage B-N</option>
+           <option value="rms-voltage-c-n">RMS phase-to-neutral voltage C-N</option>
+           <option value="active-power-phase-a">Active power phase A</option>
+           <option value="active-power-phase-b">Active power phase B</option>
+           <option value="active-power-phase-c">Active power phase C</option>
+           <option value="active-power-total">Total active power</option>
+           <option value="apparent-power-total">Total apparent power</option>
+           <option value="power-factor-total">Total power factor</option>
+           <option value="total-active-energy-delivered-received">Total active energy delivered + received</option>
+           <option value="partial-active-energy-delivered-received">Partial active energy delivered + received</option>
+           <option value="total-active-power-demand">Demand total active power</option>
+           <option value="max-demand-total-active-power">Maximum demand total active power</option>
+       </select>
+   </div>
+   
+    
+   <div id="node-input-data-energy-m250-m630" class="form-row">
+       <label for="node-input-data-energy-m250-m630"><i class="icon-list"></i> powertag</label>
+       <select id="node-input-data-energy-m250-m630">
+        <option value="rms-current-phase-a">RMS current phase A</option>
+        <option value="rms-current-phase-b">RMS current phase B</option>
+        <option value="rms-current-phase-c">RMS current phase C</option>        
+        <option value="rms-voltage-a-b">RMS phase-to-phase voltage A-B</option>
+        <option value="rms-voltage-b-c">RMS phase-to-phase voltage B-C</option>
+        <option value="rms-voltage-c-a">RMS phase-to-phase voltage C-A</option>
+        <option value="rms-voltage-a-n">RMS phase-to-neutral voltage A-N</option>
+        <option value="rms-voltage-b-n">RMS phase-to-neutral voltage B-N</option>
+        <option value="rms-voltage-c-n">RMS phase-to-neutral voltage C-N</option>
+        <option value="active-power-phase-a">Active power phase A</option>
+        <option value="active-power-phase-b">Active power phase B</option>
+        <option value="active-power-phase-c">Active power phase C</option>
+        <option value="active-power-total">Total active power</option>
+        <option value="reactive-power-total">Total reactive power</option>
+        <option value="apparent-power-total">Total apparent power</option>
+        <option value="power-factor-total">Total power factor</option>
+        <option value="frequency">Frequency</option>
+        <option value="device-temperature">Device temperature</option
+        <option value="total-active-energy-delivered-count-positively">Total active energy delivered count positively</option>
+        <option value="total-active-energy-received">Total active energy received</option>
+        <option value="active-energy-phase-a-delivered">Active energy phase A delivered</option>
+        <option value="active-energy-phase-b-delivered">Active energy phase B delivered</option>
+        <option value="active-energy-phase-c-delivered">Active energy phase C delivered</option>
+        <option value="partial-active-energy-delivered">Partial active energy delivered</option>
+        <option value="partial-active-energy-received">Partial active energy received</option>
+        <option value="partial-reactive-energy-delivered">Partial reactive energy delivered</option>
+        <option value="partial-reactive-energy-received">Partial reactive energy received</option>           
+       </select>
+   </div>
+   
+   
+   <div id="powertag-energy-f16-rope" class="form-row">
+       <label for="powertag-energy-f16-rope"><i class="icon-list"></i> powertag</label>
+       <select id="powertag-energy-f16-rope">
+        <option value="rms-current-phase-a">RMS current phase A</option>
+        <option value="rms-current-phase-b">RMS current phase B</option>
+        <option value="rms-current-phase-c">RMS current phase C</option>
+        <option value="rms-current-phase-neutral">RMS current neutral</option> 
+        <option value="rms-voltage-a-b">RMS phase-to-phase voltage A-B</option>
+        <option value="rms-voltage-b-c">RMS phase-to-phase voltage B-C</option>
+        <option value="rms-voltage-c-a">RMS phase-to-phase voltage C-A</option>
+        <option value="rms-voltage-a-n">RMS phase-to-neutral voltage A-N</option>
+        <option value="rms-voltage-b-n">RMS phase-to-neutral voltage B-N</option>
+        <option value="rms-voltage-c-n">RMS phase-to-neutral voltage C-N</option>
+        <option value="active-power-phase-a">Active power phase A</option>
+        <option value="active-power-phase-b">Active power phase B</option>
+        <option value="active-power-phase-c">Active power phase C</option>
+        <option value="active-power-total">Total active power</option>
+        <option value="reactive-power-phase-a">Reactive power phase A</option>
+        <option value="reactive-power-phase-b">Reactive power phase B</option>
+        <option value="reactive-power-phase-c">Reactive power phase C</option>
+        <option value="reactive-power-total">Total reactive power</option>
+        <option value="apparent-power-phase-a">Apparent power phase A</option>
+        <option value="apparent-power-phase-b">Apparent power phase B</option>
+        <option value="apparent-power-phase-c">Apparent power phase C</option>
+        <option value="apparent-power-total">Total apparent power</option>
+        <option value="power-factor-phase-a">Power factor phase A</option>
+        <option value="power-factor-phase-b">Power factor phase B</option>
+        <option value="power-factor-phase-c">Power factor phase C</option>
+        <option value="power-factor-total">Total power factor</option>
+        <option value="power-factor-sign">Power factor sign convention</option>
+        <option value="frequency">Frequency</option>
+        <option value="device-temperature">Device temperature</option>
+        <option value="total-active-energy-delivered-count-positively">Total active energy delivered count positively</option>
+        <option value="total-active-energy-received">Total active energy received</option>
+        <option value="partial-active-energy-delivered">Partial active energy delivered</option>
+        <option value="partial-active-energy-received">Partial active energy received</option>
+        <option value="partial-reactive-energy-delivered">Partial reactive energy delivered</option>
+        <option value="partial-reactive-energy-received">Partial reactive energy received</option>
+        <option value="total-active-power-demand">Demand total active power</option>
+        <option value="max-demand-total-active-power">Maximum demand total active power</option>
+       </select>
+   </div> 
+   
+   
+</script>
+
+<script type="text/x-red" data-help-name="powertag">
+    <p>This node resumes the configuration parameters that are necessary to poll a Schneider Electric PowerTag series over Modbus TCP/IP. To use this node:<br>1. Enter Unit ID corresponding to the configured Unit ID in the device.<br>2. Select device type. <br>3. Select which information you want to request from the device.<br>4. Add more node to select more data.</p>
+</script>
+
+
+
+
+
+
+
+

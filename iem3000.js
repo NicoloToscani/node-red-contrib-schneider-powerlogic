@@ -24,7 +24,8 @@ module.exports = function(RED) {
                     };
                 res.topic = "current-P1";
                 res.format = "float32";
-                res.model: "iem3000";
+                res.model = "iem3000";
+                res.unit = "A";
               break;
               case 1:
               case "current-P2":
@@ -36,7 +37,8 @@ module.exports = function(RED) {
                     };
                 res.topic = "current-P2";
                 res.format = "float32";
-                res.model: "iem3000";
+                res.model = "iem3000";
+                res.unit = "A";
               break;
               case 2:
               case "current-P3":
@@ -48,7 +50,8 @@ module.exports = function(RED) {
                     };
                 res.topic = "current-P3";
                 res.format = "float32";
-                res.model: "iem3000";
+                res.model = "iem3000";
+                res.unit = "A";
               break;
               case 3:
               case "current-avg":
@@ -60,7 +63,8 @@ module.exports = function(RED) {
                     };
                 res.topic = "current-avg";
                 res.format = "float32";
-                res.model: "iem3000";
+                res.model = "iem3000";
+                res.unit = "A";
               break;
               case 4:
               case "voltage-L1L2":
@@ -72,7 +76,8 @@ module.exports = function(RED) {
                     };
                 res.topic = "voltage-L1L2";
                 res.format = "float32";
-                res.model: "iem3000";
+                res.model = "iem3000";
+                res.unit = "V";
               break;
               case 6:
               case "voltage-L2L3":
@@ -84,7 +89,8 @@ module.exports = function(RED) {
                     };
                 res.topic = "voltage-L3L3";
                 res.format = "float32";
-                res.model: "iem3000";
+                res.model = "iem3000";
+                res.unit = "V";
               break;
               case 6:
               case "voltage-L3L1":
@@ -96,7 +102,8 @@ module.exports = function(RED) {
                     };
                 res.topic = "voltage-L3L1";
                 res.format = "float32";
-                res.model: "iem3000";
+                res.model = "iem3000";
+                res.unit = "V";
               break;
               case 7:
               case "voltage-LL-Avg":
@@ -108,7 +115,8 @@ module.exports = function(RED) {
                     };
                 res.topic = "voltage-LL-Avg";
                 res.format = "float32";
-                res.model: "iem3000";
+                res.model = "iem3000";
+                res.unit = "V";
               break;
               case 8:
               case "voltage-L1N":
@@ -120,7 +128,8 @@ module.exports = function(RED) {
                     };
                 res.topic = "voltage-L1N";
                 res.format = "float32";
-                res.model: "iem3000";
+                res.model  = "iem3000";
+                res.unit = "V";
               break;
               case 9:
               case "voltage-L2N":
@@ -132,7 +141,8 @@ module.exports = function(RED) {
                     };
                 res.topic = "voltage-L2N";
                 res.format = "float32";
-                res.model: "iem3000";
+                res.model = "iem3000";
+                res.unit = "V";
               break;
               case 10:
               case "voltage-L3N":
@@ -144,7 +154,8 @@ module.exports = function(RED) {
                     };
                 res.topic = "voltage-L3N";
                 res.format = "float32";
-                res.model: "iem3000";
+                res.model = "iem3000";
+                res.unit = "V";
               break;
               case 11:
               case "voltage-LN-avg":
@@ -156,7 +167,8 @@ module.exports = function(RED) {
                     };
                 res.topic = "voltage-LN-avg";
                 res.format = "float32";
-                res.model: "iem3000";
+                res.model = "iem3000";
+                res.unit = "V";
               break;
               case 12:
               case "actPowerP1":
@@ -168,7 +180,8 @@ module.exports = function(RED) {
                     };
                 res.topic = "actPowerP1";
                 res.format = "float32";
-                res.model: "iem3000";
+                res.model = "iem3000";
+                res.unit = "kW";
               break;
               case 13:
               case "actPowerP2":
@@ -180,7 +193,8 @@ module.exports = function(RED) {
                     };
                 res.topic = "actPowerP2";
                 res.format = "float32";
-                res.model: "iem3000";
+                res.model = "iem3000";
+                res.unit = "kW";
               break;
               case 14:
               case "actPowerP3":
@@ -192,7 +206,8 @@ module.exports = function(RED) {
                     };
                 res.topic = "actPowerP3";
                 res.format = "float32";
-                res.model: "iem3000";
+                res.model = "iem3000";
+                res.unit = "kW";
               break;
               case 15:
                 case "actPowerTot":
@@ -204,7 +219,8 @@ module.exports = function(RED) {
                       };
                   res.topic = "actPowerTot";
                   res.format = "float32";
-                  res.model: "iem3000";
+                  res.model = "iem3000";
+                  res.unit = "";
                 break;
               case 16:
               case "pFactorTot":
@@ -216,7 +232,8 @@ module.exports = function(RED) {
                     };
                 res.topic = "pFactorTot";
                 res.format = "float32";
-                res.model: "iem3000";
+                res.model = "iem3000";
+                res.unit = "kW";
               break;
               case 17:
                 case "frequency":
@@ -228,7 +245,8 @@ module.exports = function(RED) {
                       };
                   res.topic = "frequency";
                   res.format = "float32";
-                  res.model: "iem3000";
+                  res.model = "iem3000";
+                  res.unit = "Hz";
                 break;
                 case 18:
                 case "toEnergyActImp":
@@ -240,7 +258,8 @@ module.exports = function(RED) {
                       };
                   res.topic = "toEnergyActImp";
                   res.format = "int64";
-                  res.model: "iem3000";
+                  res.model = "iem3000";
+                  res.unit = "Wh";
                 break;    
             }
             
