@@ -17,7 +17,7 @@ module.exports = function(RED) {
           var res = {};
           
           // PowerTag Energy x63
-          if(settings.device == "powertag-energy-m250-m630"){
+          if(settings.device == "powertag-energy-x63"){
             switch(settings.data){
               case 0:
               case "rms-current-phase-a":
