@@ -17,7 +17,7 @@ module.exports = function(RED) {
           var res = {};
           
           // PowerTag Energy x63
-          if(settings.device == "PowerTag Energy x63"){
+          if(settings.device == "powertag-energy-m250-m630"){
             switch(settings.data){
               case 0:
               case "rms-current-phase-a":
@@ -269,7 +269,7 @@ module.exports = function(RED) {
             }
           }
           // PowerTag Energy M250/M630
-          if(settings.device == "PowerTag Energy M250/M630"){
+          else if(settings.device == "powertag-energy-m250-m630"){
             switch(settings.data){
               case 0:
               case "rms-current-phase-a":
@@ -625,7 +625,7 @@ module.exports = function(RED) {
             }
           }
           // PowerTag Energy F160/Rope
-          else if(settings.device == "PowerTag Energy F160/Rope"){
+          else if(settings.device == "powertag-energy-f16-rope"){
             switch(settings.data){
               case 0:
               case "rms-current-phase-a":
