@@ -60,26 +60,34 @@
              let deviceType = $("#node-input-device option:selected");
              
                     <!--PowerTag Energy x63-->
-                    if(deviceType.val() == "PowerTag Energy x63") {
+                    if(deviceType.val() == "powertag-energy-x63") {
                         
                         let dataValue = $("#node-input-data-energy-x63 option:selected");
                         this.data = dataValue.val();
+                        
+                        console.log('deviceType ' + deviceType.val());
+                        console.log(this.data);
               
                     } 
                     
                     <!--PowerTag Energy M250/M630-->
-                    if(deviceType.val() == "PowerTag Energy M250/M630") {
+                    if(deviceType.val() == "powertag-energy-m250-m630") {
                         
                         let dataValue = $("#node-input-data-energy-m250-m630 option:selected");
                         this.data = dataValue.val();
                         
+                        console.log('deviceType ' + deviceType.val());
+                        console.log(this.data);
                     } 
                     
                     <!--PowerTag Energy F160/Rope-->
-                    if(deviceType.val() == "PowerTag Energy F160/Rope") {
+                    if(deviceType.val() == "powertag-energy-f16-rope") {
                         
                         let dataValue = $("#node-input-data-energy-f160-rope option:selected");
                         this.data = dataValue.val();
+                        
+                        console.log('deviceType ' + deviceType.val());
+                        console.log(this.data);
                         
                     } 
                     
@@ -93,10 +101,13 @@
         <label for="node-input-name"><i class="icon-tag"></i> Name</label>
         <input type="text" id="node-input-name" placeholder="Name">
     </div>
+    
     <div class="form-row">
         <label for="node-input-unitId"><i class="icon-tag"></i> Unit ID</label>
         <input type="text" id="node-input-unitId" placeholder=" 123">
     </div>
+        
+    
     <div class="form-row">
         <label for="node-input-device"><i class="icon-tag"></i> Device</label>
         <select id="node-input-device" name="node-input-device">
@@ -105,6 +116,9 @@
            <option value="powertag-energy-f16-rope">PowerTag Energy F160/Rope</option>
         </select>
     </div>
+    
+    
+   
     
     <div id="node-input-data-energy-x63" class="form-row">
        <label for="node-input-data-energy-x63"><i class="icon-list"></i> Measure</label>
@@ -166,9 +180,9 @@
    </div>
    
    
-   <div id="powertag-energy-f16-rope" class="form-row">
-       <label for="powertag-energy-f16-rope"><i class="icon-list"></i> Measure</label>
-       <select id="powertag-energy-f16-rope">
+   <div id="node-input-data-energy-f160-rope" class="form-row">
+       <label for="node-input-data-energy-f160-rope"><i class="icon-list"></i> Measure</label>
+       <select id="node-input-data-energy-f160-rope">
         <option value="rms-current-phase-a">RMS current phase A</option>
         <option value="rms-current-phase-b">RMS current phase B</option>
         <option value="rms-current-phase-c">RMS current phase C</option>
