@@ -12,7 +12,7 @@ Alternatively, run the following command in your Node-RED user directory - typic
 ## How to use
 
 ### meter node
-Use the `pm3000`, `pm5000`, `iem3000` or `powertag` node to configure which information you want to request from the gateway.
+Use the `pm3000`, `pm5000`, `iem3000`, `powertag` or `powertag` node to configure which information you want to request from the gateway.
 
 Wire the output of the `pm3000`, `pm5000`, `iem3000` or `powertag` to the input of the `Modbus Flex Getter` from 'node-red-contrib-modbus' modules.
 
@@ -24,6 +24,8 @@ Use the `converter` node to convert the values from the modbus response into hum
 Wire the second output of the `Modbus Flex Getter` to the input of the `converter`.
 
 ## Usage
+
+### PowerLogic series
 List of **PM3000/PM5000** meter data:
 
 | Measure                            | Units                 | Type          | 
@@ -214,6 +216,84 @@ List of **iEM3000** meter data:
 |  Partial reactive energy received                  | VARh                  | Int64         |
 |  Damand total active power                         | Wh                    | Float32       |
 |  Maximum demand total active power                 | Wh                    | Float32       |
+
+### Acti 9 Smartlink
+
+**iOF+SD24**
+
+| Status                                             | Units                 | Type          | 
+| -------------------------------------------------- | --------------------- | ------------- | 
+|  OF status                                         |                       | Bitmap        | 
+|  SD status                                         |                       | Bitmap        |
+
+| Counters                                           | Units                 | Type          | 
+| -------------------------------------------------- | --------------------- | ------------- | 
+|  Number of circuit breaker opening/closing cycle   |                       | Uint32        | 
+|  Number of trippings                               |                       | Uint32        |
+|  Load operating time                               | Hours                 | Uint32        |
+
+**OF+SD24**
+
+| Status                                             | Units                 | Type          | 
+| -------------------------------------------------- | --------------------- | ------------- | 
+|  OF status                                         |                       | Bitmap        | 
+|  SD status                                         |                       | Bitmap        |
+
+| Counters                                           | Units                 | Type          | 
+| -------------------------------------------------- | --------------------- | ------------- | 
+|  Number of circuit breaker opening/closing cycle   |                       | Uint32        | 
+|  Number of trippings                               |                       | Uint32        |
+|  Load operating time                               | Hours                 | Uint32        |
+
+**iACT24 Auxiliary for iCT Contactor**
+
+| Status                                             | Units                 | Type          | 
+| -------------------------------------------------- | --------------------- | ------------- | 
+|  O/C contactor status                              |                       | Bitmap        | 
+|  Device present                                    |                       | Bitmap        |
+
+| Counters                                           | Units                 | Type          | 
+| -------------------------------------------------- | --------------------- | ------------- | 
+|  Number of contactor opening/closing cycle         |                       | Uint32        | 
+|  Load operating time for an NO contactor           | Hours                 | Uint32        |
+
+**iATL24 Auxiliary for iTL Impulse Relay**
+
+| Status                                             | Units                 | Type          | 
+| -------------------------------------------------- | --------------------- | ------------- | 
+|  O/C contactor status                              |                       | Bitmap        | 
+|  Device present                                    |                       | Bitmap        |
+
+| Counters                                           | Units                 | Type          | 
+| -------------------------------------------------- | --------------------- | ------------- | 
+|  Number of impulse relay opening/close cycles      |                       | Uint32        | 
+|  Load operating time                               | Hours                 | Uint32        |
+
+**Acti9 RCA iC60 Remote Control with Ti24 Interface**
+
+| Status                                             | Units                 | Type          | 
+| -------------------------------------------------- | --------------------- | ------------- | 
+|  OF status                                         |                       | Bitmap        |  
+|  SD status                                         |                       | Bitmap        |
+
+| Counters                                           | Units                 | Type          | 
+| -------------------------------------------------- | --------------------- | ------------- | 
+|  Number of circuit breaker opening/closing cycle   |                       | Uint32        | 
+|  Number of trippings                               |                       | Uint32        |
+|  Load operating time                               | Hours                 | Uint32        |
+
+**Acti9 Reflex iC60 Integrated Control Circuit Breaker With Ti24 Interface**
+
+| Status                                             | Units                 | Type          | 
+| -------------------------------------------------- | --------------------- | ------------- | 
+|  O/C status                                        |                       | Bitmap        |  
+|  auto/OFF status                                   |                       | Bitmap        |
+
+| Counters                                           | Units                 | Type          | 
+| -------------------------------------------------- | --------------------- | ------------- | 
+|  Number of circuit breaker opening/closing cycle   |                       | Uint32        | 
+|  Number of trippings                               |                       | Uint32        |
+|  Load operating time                               | Hours                 | Uint32        |
 
 
 ### Meter data 

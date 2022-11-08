@@ -1,0 +1,281 @@
+<script type="text/javascript">
+    RED.nodes.registerType('smartlink',{
+        category: 'PowerLogic',
+        color: '#009E4D',
+        defaults: {
+            name: {value:""},
+            unitId: {value: "1",required:true},
+            mode: {value: "",required:true},
+            channel: {value: "",required:true},
+            device: {value: "",required:true},
+            data: {value: "", required: true}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "serial.png",
+        label: function() {
+            return this.name||"smartlink";
+        },
+        <!--When the config screen is opened-->
+        oneditprepare: function() {
+        
+            <!--Previous data set-->
+            const myData = this.data;
+            
+            $("#node-input-device").on("change",function() {
+                
+                if (this.value === "") {
+                    $("#node-input-data-iofsd24").hide();
+                    $("#node-input-data-ofsd24").hide();
+                    $("#node-input-data-iact24").hide();
+                    $("#node-input-data-iatl24").hide();
+                    $("#node-input-data-rcaic60ti24").hide();
+                    $("#node-input-data-refelxic60ti24").hide();
+                } 
+                
+                else if (this.value === "iof+sd24") {
+                    $("#node-input-data-iofsd24").show();
+                    $("#node-input-data-ofsd24").hide();
+                    $("#node-input-data-iact24").hide();
+                    $("#node-input-data-iatl24").hide();
+                    $("#node-input-data-rcaic60ti24").hide();
+                    $("#node-input-data-refelxic60ti24").hide();
+     
+                    $("#node-input-data-iofsd24 option[value=" +  myData + "]").attr("selected", true); 
+                } 
+                else if (this.value === "of+sd24") {
+                    $("#node-input-data-iofsd24").hide();
+                    $("#node-input-data-ofsd24").show();
+                    $("#node-input-data-iact24").hide();
+                    $("#node-input-data-iatl24").hide();
+                    $("#node-input-data-rcaic60ti24").hide();
+                    $("#node-input-data-refelxic60ti24").hide();
+                    
+                    $("#node-input-data-iofsd24 option[value=" +  myData + "]").attr("selected", true);  
+                } 
+                else if (this.value === "iact24") {
+                    $("#node-input-data-iofsd24").hide();
+                    $("#node-input-data-ofsd24").hide();
+                    $("#node-input-data-iact24").show();
+                    $("#node-input-data-iatl24").hide();
+                    $("#node-input-data-rcaic60ti24").hide();
+                    $("#node-input-data-refelxic60ti24").hide();
+                    
+                    $("#node-input-data-iact24 option[value=" +  myData + "]").attr("selected", true);
+                } 
+                else if (this.value == "iatl24") {
+                    $("#node-input-data-iofsd24").hide();
+                    $("#node-input-data-ofsd24").hide();
+                    $("#node-input-data-iact24").hide();
+                    $("#node-input-data-iatl24").show();
+                    $("#node-input-data-rcaic60ti24").hide();
+                    $("#node-input-data-refelxic60ti24").hide();
+                    
+                    $("#node-input-data-iatl24 option[value=" +  myData + "]").attr("selected", true);
+                } 
+                else if (this.value == "rca-ic60-ti24") {
+                    $("#node-input-data-iofsd24").hide();
+                    $("#node-input-data-ofsd24").hide();
+                    $("#node-input-data-iact24").hide();
+                    $("#node-input-data-iatl24").hide();
+                    $("#node-input-data-rcaic60ti24").show();
+                    $("#node-input-data-refelxic60ti24").hide();
+                    
+                    $("#node-input-data-rcaic60ti24 option[value=" +  myData + "]").attr("selected", true);
+                } 
+                else if (this.value == "refelx-ic60-ti24") {
+                    $("#node-input-data-iofsd24").hide();
+                    $("#node-input-data-ofsd24").hide();
+                    $("#node-input-data-iact24").hide();
+                    $("#node-input-data-iatl24").hide();
+                    $("#node-input-data-rcaic60ti24").hide();
+                    $("#node-input-data-refelxic60ti24").show();
+                    
+                    $("#node-input-data-refelxic60ti24 option[value=" +  myData + "]").attr("selected", true);   
+                } 
+                    
+            }).trigger("change");
+            
+            
+        }, 
+        
+        <!--When the config screen is closed ('done' button)-->
+        oneditsave: function () {
+        
+             <!--Check wich device type is selected-->
+             let deviceType = $("#node-input-device option:selected");
+             // console.log('oneditsave');
+             
+             <!--iOF+SD24-->
+             if(deviceType.val() == "iof+sd24") {
+                        
+                let dataValue = $("#node-input-data-iofsd24 option:selected");
+                this.data = dataValue.val();
+                        
+                // console.log('deviceType ' + deviceType.val());
+                // console.log(this.data);
+              
+             } 
+             
+             <!-- OF+SD24 -->
+             if(deviceType.val() == "of+sd24") {
+                        
+                let dataValue = $("#node-input-data-ofsd24 option:selected");
+                this.data = dataValue.val();
+                        
+                // console.log('deviceType ' + deviceType.val());
+                // console.log(this.data);
+              
+             }
+             
+             <!-- iACT24 -->
+             if(deviceType.val() == "iact24") {
+                        
+                let dataValue = $("#node-input-data-iact24 option:selected");
+                this.data = dataValue.val();
+                        
+                // console.log('deviceType ' + deviceType.val());
+                // console.log(this.data);
+              
+             }
+             
+             <!-- iATL24 -->
+             if(deviceType.val() == "iatl24") {
+                        
+                let dataValue = $("#node-input-data-iatl24 option:selected");
+                this.data = dataValue.val();
+                        
+                // console.log('deviceType ' + deviceType.val());
+                // console.log(this.data);
+              
+             }
+             
+             <!-- RCA iC60 -->
+             if(deviceType.val() == "rca-ic60-ti24") {
+                        
+                let dataValue = $("#node-input-data-rcaic60ti24 option:selected");
+                this.data = dataValue.val();
+                        
+                // console.log('deviceType ' + deviceType.val());
+                // console.log(this.data);
+              
+             }             
+
+             <!-- Reflex iC60 -->
+             if(deviceType.val() == "refelx-ic60-ti24") {
+                        
+                let dataValue = $("#node-input-data-refelxic60ti24 option:selected");
+                this.data = dataValue.val();
+                        
+                // console.log('deviceType ' + deviceType.val());
+                // console.log(this.data);
+              
+             }
+             
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="smartlink">
+        
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    
+    <div class="form-row">
+        <label for="node-input-unitId"><i class="icon-tag"></i> Unit ID</label>
+        <input type="text" id="node-input-unitId" placeholder=" 123">
+    </div>
+    
+     <div class="form-row">
+        <label for="node-input-mode"><i class="icon-tag"></i> Mode</label>
+        <select id="node-input-mode" name="node-input-mode">
+           <option value="read">Read</option>
+           <option disabled value="write">Write</option>
+        </select>
+    </div>
+    
+    <div class="form-row">
+        <label for="node-input-channel"><i class="icon-tag"></i> Channel</label>
+        <select id="node-input-channel" name="node-input-channel">
+           <option value="digital-channel-1">Digital channel 1</option>
+           <option value="digital-channel-2">Digital channel 2</option>
+           <option value="digital-channel-3">Digital channel 3</option>
+           <option value="digital-channel-4">Digital channel 4</option>
+           <option value="digital-channel-5">Digital channel 5</option>
+           <option value="digital-channel-6">Digital channel 6</option>
+           <option value="digital-channel-7">Digital channel 7</option>
+        </select>
+    </div>
+        
+    <div class="form-row">
+        <label for="node-input-device"><i class="icon-tag"></i> Device</label>
+        <select id="node-input-device" name="node-input-device">
+           <option value="iof+sd24">iOF+SD24</option>
+           <option value="of+sd24">OF+SD24</option>
+           <option value="iact24">iACT24</option>
+           <option value="iatl24">iACTL24</option>
+           <option value="rca-ic60-ti24">RCA iC60 with Ti24</option>
+           <option value="refelx-ic60-ti24">Reflex iC60 with Ti24</option>
+        </select>
+    </div>
+        
+    <div id="node-input-data-iofsd24" class="form-row">
+       <label for="node-input-data-iofsd24"><i class="icon-list"></i> Measure</label>
+       <select id="node-input-data-iofsd24">
+           <option value="status">Status</option>
+           <option value="counters">Counters</option>
+       </select>
+    </div>
+    
+    <div id="node-input-data-ofsd24" class="form-row">
+       <label for="node-input-data-ofsd24"><i class="icon-list"></i> Measure</label>
+       <select id="node-input-data-ofsd24">
+           <option value="status">Status</option>
+           <option value="counters">Counters</option>
+       </select>
+    </div>
+        
+    <div id="node-input-data-iact24" class="form-row">
+       <label for="node-input-data-iact24"><i class="icon-list"></i> Measure</label>
+       <select id="node-input-data-iact24">
+           <option value="status">Status</option>
+           <option value="commands">Commands</option>
+           <option value="counters">Counters</option>
+       </select>
+    </div>
+    
+    <div id="node-input-data-iatl24" class="form-row">
+       <label for="node-input-data-iatl24"><i class="icon-list"></i> Measure</label>
+       <select id="node-input-data-iatl24">
+           <option value="status">Status</option>
+           <option value="commands">Commands</option>
+           <option value="counters">Counters</option>
+       </select>
+    </div>
+    
+    <div id="node-input-data-rcaic60ti24" class="form-row">
+       <label for="node-input-data-rcaic60ti24"><i class="icon-list"></i> Measure</label>
+       <select id="node-input-data-rcaic60ti24">
+           <option value="status">Status</option>
+           <option value="commands">Commands</option>
+           <option value="counters">Counters</option>
+       </select>
+    </div>
+    
+    <div id="node-input-data-refelxic60ti24" class="form-row">
+       <label for="node-input-data-refelxic60ti24"><i class="icon-list"></i> Measure</label>
+       <select id="node-input-data-refelxic60ti24">
+           <option value="status">Status</option>
+           <option value="commands">Commands</option>
+           <option value="counters">Counters</option>
+       </select>
+    </div>
+       
+</script>
+
+
+<script type="text/x-red" data-help-name="smartlink">
+    <p>This node resumes the configuration parameters that are necessary to poll a Schneider Electric Smartlink series over Modbus TCP/IP. To use this node:<br>1. Enter Modbus unit ID.<br>2. Select mode. <br>3. Select channel number. <br>4. Select device type. <br>5. Select which information you want to request from the device.</p>
+</script>
