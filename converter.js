@@ -137,125 +137,82 @@ module.exports = function(RED) {
                       if(msg.model == "iof+sd24" || msg.model == "of+sd24" || msg.model == "rca-ic60-ti24"){
                       
                          // OF status
-                         bit = msg.payload.buffer.readInt16BE(0,2).toString(2);
-                         OF_bit = bit.charAt(0);
+                         msg.payload.status = msg.payload.buffer.readInt16BE(0,2);
                          
-                         if(OF_bit == 0){
+                         // OF_bit = bit.charAt(0);
                          
-                            msg.payload.OF = "Circuit breaker open";
-                            msg.payload.OF_bit = 0;
+                         if(msg.payload.status == 0){
                          
-                         
-                         }
-                         else if (OF_bit == 1)
-                         {
-                         
-                            msg.payload.OF = "Circuit breaker closed"; 
-                            msg.payload.OF_bit = 1;
+                            msg.payload.status_desc = "Trip";
                          
                          }
                          
-                       
-                         // SD status
-                         SD_bit = bit.charAt(1);
+                         else if(msg.payload.status == 2){
                          
-                         if(SD_bit == 0){
-                         
-                            msg.payload.SD = "Device tripped"; 
-                            msg.payload.SD = 0;
-                         
+                            msg.payload.status_desc = "Open";
                          
                          }
-                         else if (SD_bit == 1)
-                         {
                          
-                            msg.payload.SD = "Device not tripped";
-                            msg.payload.SD = 1; 
+                         else if(msg.payload.status == 3){
+                         
+                            msg.payload.status_desc = "Open";
                          
                          }
+                         
                          
                       }
                       
                       else if(msg.model == "iact24" || msg.model == "iatl24"){
 
-                         bit = msg.payload.buffer.readInt16BE(0,2).toString(2);
-                         OC_bit = bit.charAt(0);
+                         // OF status
+                         msg.payload.status = msg.payload.buffer.readInt16BE(0,2);
                          
-                         if(OC_bit == 0){
+                         // OF_bit = bit.charAt(0);
                          
-                            msg.payload.OC = "Contactor open";
-                            msg.payload.OC_bit = 0;
+                         if(msg.payload.status == 0){
                          
-                         
-                         }
-                         else if (OC_bit == 1)
-                         {
-                         
-                            msg.payload.OC = "Contactor closed";
-                            msg.payload.OC_bit = 1;
+                            msg.payload.status_desc = "Trip";
                          
                          }
                          
-                       
-                         // SD status
-                         device_present_bit = bit.charAt(1);
+                         else if(msg.payload.status == 2){
                          
-                         if(device_present_bit == 0){
-                         
-                            msg.payload.device_present = "Connection fault or no connected device"; 
-                            msg.paylaod.device_present_bit = 0;
-                         
+                            msg.payload.status_desc = "Open";
                          
                          }
-                         else if (device_present_bit == 1)
-                         {
                          
-                            msg.payload.device_present = "Connected device"; 
-                            msg.paylaod.device_present_bit = 1;
+                         else if(msg.payload.status == 3){
                          
-                         }                      
+                            msg.payload.status_desc = "Open";
+                         
+                         }
                      
                       }
                       
                       else if(msg.model == "refelx-ic60-ti24"){
                          
-                         bit = msg.payload.buffer.readInt16BE(0,2).toString(2);
-                         OC_bit = bit.charAt(0);
+                         // OF status
+                         msg.payload.status = msg.payload.buffer.readInt16BE(0,2);
                          
-                         if(OC_bit == 0){
+                         // OF_bit = bit.charAt(0);
                          
-                            msg.payload.OC = "Circuit breaker open";
-                            msg.payload.OC_bit = 0;
+                         if(msg.payload.status == 0){
                          
-                         
-                         }
-                         else if (OC_bit == 1)
-                         {
-                         
-                            msg.payload.OC = "Circuit breaker closed";
-                            msg.payload.OC_bit = 1;
+                            msg.payload.status_desc = "Trip";
                          
                          }
                          
-                       
-                         // SD status
-                         auto_off_status_bit = bit.charAt(1);
+                         else if(msg.payload.status == 2){
                          
-                         if(auto_off_status_bit == 0){
-                         
-                            msg.payload.auto_off_status = "Handle in OFF position";
-                            msg.payload.auto_off_status_bit = 0;
-                         
+                            msg.payload.status_desc = "Open";
                          
                          }
                          
-                         else if (auto_off_status_bit == 1)
-                         {
+                         else if(msg.payload.status == 3){
                          
-                            msg.payload.auto_off_status = "Handle in upper position";
-                            msg.payload.auto_off_status_bit = 1;
+                            msg.payload.status_desc = "Open";
                          
-                         }                                            
+                         }           
                       
                       }
                              

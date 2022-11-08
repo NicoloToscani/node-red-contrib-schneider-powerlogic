@@ -32,7 +32,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14199,
+                                 address: 14200,
                                  quantity: 1,
                              };
                              res.topic = "status";
@@ -45,10 +45,10 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14211,
+                                 address: 14212,
                                  quantity: 6,
                              };
-                             res.topic = "status";
+                             res.topic = "counters";
                              res.format = "uint32";
                              res.unit = "";
                              res.channel = "Digital channel 1"
@@ -62,7 +62,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14199+40,
+                                 address: 14200+40,
                                  quantity: 1,
                              };
                              res.topic = "status";
@@ -75,10 +75,10 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14211+40,
+                                 address: 14212+40,
                                  quantity: 6,
                              };
-                             res.topic = "status";
+                             res.topic = "counters";
                              res.format = "uint32";
                              res.unit = "";
                              res.channel = "Digital channel 2"
@@ -93,7 +93,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14199+80,
+                                 address: 14200+80,
                                  quantity: 1,
                              };
                              res.topic = "status";
@@ -106,10 +106,10 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14211+80,
+                                 address: 14212+80,
                                  quantity: 6,
                              };
-                             res.topic = "status";
+                             res.topic = "counters";
                              res.format = "uint32";
                              res.unit = "";
                              res.channel = "Digital channel 3"
@@ -124,7 +124,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14199+120,
+                                 address: 14200+120,
                                  quantity: 1,
                              };
                              res.topic = "status";
@@ -137,10 +137,10 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14211+120,
+                                 address: 14212+120,
                                  quantity: 6,
                              };
-                             res.topic = "status";
+                             res.topic = "counters";
                              res.format = "uint32";
                              res.unit = "";
                              res.channel = "Digital channel 4"
@@ -155,7 +155,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14199+160,
+                                 address: 14200+160,
                                  quantity: 1,
                              };
                              res.topic = "status";
@@ -168,10 +168,10 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14211+160,
+                                 address: 14212+160,
                                  quantity: 6,
                              };
-                             res.topic = "status";
+                             res.topic = "counters";
                              res.format = "uint32";
                              res.unit = "";
                              res.channel = "Digital channel 5"
@@ -186,7 +186,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14199+200,
+                                 address: 14200+200,
                                  quantity: 1,
                              };
                              res.topic = "status";
@@ -199,10 +199,10 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14211+200,
+                                 address: 14212+200,
                                  quantity: 6,
                              };
-                             res.topic = "status";
+                             res.topic = "counters";
                              res.format = "uint32";
                              res.unit = "";
                              res.channel = "Digital channel 6"
@@ -217,7 +217,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14199+240,
+                                 address: 14200+240,
                                  quantity: 1,
                              };
                              res.topic = "status";
@@ -230,10 +230,10 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14211+240,
+                                 address: 14212+240,
                                  quantity: 6,
                              };
-                             res.topic = "status";
+                             res.topic = "counters";
                              res.format = "uint32";
                              res.unit = "";
                              res.channel = "Digital channel 7"
@@ -251,7 +251,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14199,
+                                 address: 14200,
                                  quantity: 1,
                              };
                              res.topic = "status";
@@ -264,10 +264,10 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14211,
+                                 address: 14212,
                                  quantity: 6,
                              };
-                             res.topic = "status";
+                             res.topic = "counters";
                              res.format = "uint32";
                              res.unit = "";
                              res.channel = "Digital channel 1"
@@ -281,7 +281,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14199+40,
+                                 address: 14200+40,
                                  quantity: 1,
                              };
                              res.topic = "status";
@@ -294,10 +294,10 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14211+40,
+                                 address: 14212+40,
                                  quantity: 6,
                              };
-                             res.topic = "status";
+                             res.topic = "counters";
                              res.format = "uint32";
                              res.unit = "";
                              res.channel = "Digital channel 2"
@@ -312,7 +312,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14199+80,
+                                 address: 14200+80,
                                  quantity: 1,
                              };
                              res.topic = "status";
@@ -325,10 +325,10 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14211+80,
+                                 address: 14212+80,
                                  quantity: 6,
                              };
-                             res.topic = "status";
+                             res.topic = "counters";
                              res.format = "uint32";
                              res.unit = "";
                              res.channel = "Digital channel 3"
@@ -343,7 +343,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14199+120,
+                                 address: 14200+120,
                                  quantity: 1,
                              };
                              res.topic = "status";
@@ -356,10 +356,10 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14211+120,
+                                 address: 14212+120,
                                  quantity: 6,
                              };
-                             res.topic = "status";
+                             res.topic = "counters";
                              res.format = "uint32";
                              res.unit = "";
                              res.channel = "Digital channel 4"
@@ -374,7 +374,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14199+160,
+                                 address: 14200+160,
                                  quantity: 1,
                              };
                              res.topic = "status";
@@ -387,10 +387,10 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14211+160,
+                                 address: 14212+160,
                                  quantity: 6,
                              };
-                             res.topic = "status";
+                             res.topic = "counters";
                              res.format = "uint32";
                              res.unit = "";
                              res.channel = "Digital channel 5"
@@ -405,7 +405,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14199+200,
+                                 address: 14200+200,
                                  quantity: 1,
                              };
                              res.topic = "status";
@@ -418,10 +418,10 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14211+200,
+                                 address: 14212+200,
                                  quantity: 6,
                              };
-                             res.topic = "status";
+                             res.topic = "counters";
                              res.format = "uint32";
                              res.unit = "";
                              res.channel = "Digital channel 6"
@@ -436,7 +436,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14199+240,
+                                 address: 14200+240,
                                  quantity: 1,
                              };
                              res.topic = "status";
@@ -449,10 +449,10 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14211+240,
+                                 address: 14212+240,
                                  quantity: 6,
                              };
-                             res.topic = "status";
+                             res.topic = "counters";
                              res.format = "uint32";
                              res.unit = "";
                              res.channel = "Digital channel 7"
@@ -470,7 +470,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14199,
+                                 address: 14200,
                                  quantity: 1,
                              };
                              res.topic = "status";
@@ -483,10 +483,10 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14211,
+                                 address: 14212,
                                  quantity: 6,
                              };
-                             res.topic = "status";
+                             res.topic = "counters";
                              res.format = "uint32";
                              res.unit = "";
                              res.channel = "Digital channel 1"
@@ -496,7 +496,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14200,
+                                 address: ,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -513,7 +513,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14199+40,
+                                 address: 14200+40,
                                  quantity: 1,
                              };
                              res.topic = "status";
@@ -526,10 +526,10 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14211+40,
+                                 address: 14212+40,
                                  quantity: 6,
                              };
-                             res.topic = "status";
+                             res.topic = "counters";
                              res.format = "uint32";
                              res.unit = "";
                              res.channel = "Digital channel 2"
@@ -539,7 +539,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14200+40,
+                                 address: +40,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -557,7 +557,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14199+80,
+                                 address: 14200+80,
                                  quantity: 1,
                              };
                              res.topic = "status";
@@ -570,10 +570,10 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14211+80,
+                                 address: 14212+80,
                                  quantity: 6,
                              };
-                             res.topic = "status";
+                             res.topic = "counters";
                              res.format = "uint32";
                              res.unit = "";
                              res.channel = "Digital channel 3"
@@ -583,7 +583,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14200+80,
+                                 address: +80,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -601,7 +601,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14199+120,
+                                 address: 14200+120,
                                  quantity: 1,
                              };
                              res.topic = "status";
@@ -614,10 +614,10 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14211+120,
+                                 address: 14212+120,
                                  quantity: 6,
                              };
-                             res.topic = "status";
+                             res.topic = "counters";
                              res.format = "uint32";
                              res.unit = "";
                              res.channel = "Digital channel 4"
@@ -627,7 +627,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14200+120,
+                                 address: +120,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -645,7 +645,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14199+160,
+                                 address: 14200+160,
                                  quantity: 1,
                              };
                              res.topic = "status";
@@ -658,10 +658,10 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14211+160,
+                                 address: 14212+160,
                                  quantity: 6,
                              };
-                             res.topic = "status";
+                             res.topic = "counters";
                              res.format = "uint32";
                              res.unit = "";
                              res.channel = "Digital channel 5"
@@ -671,7 +671,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14200+160,
+                                 address: +160,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -689,7 +689,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14199+200,
+                                 address: 14200+200,
                                  quantity: 1,
                              };
                              res.topic = "status";
@@ -702,10 +702,10 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14211+200,
+                                 address: 14212+200,
                                  quantity: 6,
                              };
-                             res.topic = "status";
+                             res.topic = "counters";
                              res.format = "uint32";
                              res.unit = "";
                              res.channel = "Digital channel 6"
@@ -715,7 +715,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14200+200,
+                                 address: +200,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -733,7 +733,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14199+240,
+                                 address: 14200+240,
                                  quantity: 1,
                              };
                              res.topic = "status";
@@ -746,10 +746,10 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14211+240,
+                                 address: 14212+240,
                                  quantity: 6,
                              };
-                             res.topic = "status";
+                             res.topic = "counters";
                              res.format = "uint32";
                              res.unit = "";
                              res.channel = "Digital channel 7"
@@ -759,7 +759,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14200+240,
+                                 address: +240,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -780,7 +780,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14199,
+                                 address: 14200,
                                  quantity: 1,
                              };
                              res.topic = "status";
@@ -793,10 +793,10 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14211,
+                                 address: 14212,
                                  quantity: 6,
                              };
-                             res.topic = "status";
+                             res.topic = "counters";
                              res.format = "uint32";
                              res.unit = "";
                              res.channel = "Digital channel 1"
@@ -806,7 +806,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14200,
+                                 address: ,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -823,7 +823,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14199+40,
+                                 address: 14200+40,
                                  quantity: 1,
                              };
                              res.topic = "status";
@@ -836,10 +836,10 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14211+40,
+                                 address: 14212+40,
                                  quantity: 6,
                              };
-                             res.topic = "status";
+                             res.topic = "counters";
                              res.format = "uint32";
                              res.unit = "";
                              res.channel = "Digital channel 2"
@@ -849,7 +849,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14200+40,
+                                 address: +40,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -867,7 +867,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14199+80,
+                                 address: 14200+80,
                                  quantity: 1,
                              };
                              res.topic = "status";
@@ -880,10 +880,10 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14211+80,
+                                 address: 14212+80,
                                  quantity: 6,
                              };
-                             res.topic = "status";
+                             res.topic = "counters";
                              res.format = "uint32";
                              res.unit = "";
                              res.channel = "Digital channel 3"
@@ -893,7 +893,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14200+80,
+                                 address: +80,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -911,7 +911,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14199+120,
+                                 address: 14200+120,
                                  quantity: 1,
                              };
                              res.topic = "status";
@@ -924,10 +924,10 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14211+120,
+                                 address: 14212+120,
                                  quantity: 6,
                              };
-                             res.topic = "status";
+                             res.topic = "counters";
                              res.format = "uint32";
                              res.unit = "";
                              res.channel = "Digital channel 4"
@@ -937,7 +937,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14200+120,
+                                 address: +120,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -955,7 +955,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14199+160,
+                                 address: 14200+160,
                                  quantity: 1,
                              };
                              res.topic = "status";
@@ -968,10 +968,10 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14211+160,
+                                 address: 14212+160,
                                  quantity: 6,
                              };
-                             res.topic = "status";
+                             res.topic = "counters";
                              res.format = "uint32";
                              res.unit = "";
                              res.channel = "Digital channel 5"
@@ -981,7 +981,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14200+160,
+                                 address: +160,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -999,7 +999,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14199+200,
+                                 address: 14200+200,
                                  quantity: 1,
                              };
                              res.topic = "status";
@@ -1012,10 +1012,10 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14211+200,
+                                 address: 14212+200,
                                  quantity: 6,
                              };
-                             res.topic = "status";
+                             res.topic = "counters";
                              res.format = "uint32";
                              res.unit = "";
                              res.channel = "Digital channel 6"
@@ -1025,7 +1025,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14200+200,
+                                 address: +200,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -1043,7 +1043,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14199+240,
+                                 address: 14200+240,
                                  quantity: 1,
                              };
                              res.topic = "status";
@@ -1056,10 +1056,10 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14211+240,
+                                 address: 14212+240,
                                  quantity: 6,
                              };
-                             res.topic = "status";
+                             res.topic = "counters";
                              res.format = "uint32";
                              res.unit = "";
                              res.channel = "Digital channel 7"
@@ -1069,7 +1069,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14200+240,
+                                 address: +240,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -1091,7 +1091,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14199,
+                                 address: 14200,
                                  quantity: 1,
                              };
                              res.topic = "status";
@@ -1104,10 +1104,10 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14211,
+                                 address: 14212,
                                  quantity: 6,
                              };
-                             res.topic = "status";
+                             res.topic = "counters";
                              res.format = "uint32";
                              res.unit = "";
                              res.channel = "Digital channel 1"
@@ -1117,7 +1117,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14200,
+                                 address: ,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -1134,7 +1134,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14199+40,
+                                 address: 14200+40,
                                  quantity: 1,
                              };
                              res.topic = "status";
@@ -1147,10 +1147,10 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14211+40,
+                                 address: 14212+40,
                                  quantity: 6,
                              };
-                             res.topic = "status";
+                             res.topic = "counters";
                              res.format = "uint32";
                              res.unit = "";
                              res.channel = "Digital channel 2"
@@ -1160,7 +1160,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14200+40,
+                                 address: +40,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -1178,7 +1178,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14199+80,
+                                 address: 14200+80,
                                  quantity: 1,
                              };
                              res.topic = "status";
@@ -1191,10 +1191,10 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14211+80,
+                                 address: 14212+80,
                                  quantity: 6,
                              };
-                             res.topic = "status";
+                             res.topic = "counters";
                              res.format = "uint32";
                              res.unit = "";
                              res.channel = "Digital channel 3"
@@ -1204,7 +1204,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14200+80,
+                                 address: +80,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -1222,7 +1222,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14199+120,
+                                 address: 14200+120,
                                  quantity: 1,
                              };
                              res.topic = "status";
@@ -1235,10 +1235,10 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14211+120,
+                                 address: 14212+120,
                                  quantity: 6,
                              };
-                             res.topic = "status";
+                             res.topic = "counters";
                              res.format = "uint32";
                              res.unit = "";
                              res.channel = "Digital channel 4"
@@ -1248,7 +1248,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14200+120,
+                                 address: +120,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -1266,7 +1266,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14199+160,
+                                 address: 14200+160,
                                  quantity: 1,
                              };
                              res.topic = "status";
@@ -1279,10 +1279,10 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14211+160,
+                                 address: 14212+160,
                                  quantity: 6,
                              };
-                             res.topic = "status";
+                             res.topic = "counters";
                              res.format = "uint32";
                              res.unit = "";
                              res.channel = "Digital channel 5"
@@ -1292,7 +1292,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14200+160,
+                                 address: +160,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -1310,7 +1310,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14199+200,
+                                 address: 14200+200,
                                  quantity: 1,
                              };
                              res.topic = "status";
@@ -1323,10 +1323,10 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14211+200,
+                                 address: 14212+200,
                                  quantity: 6,
                              };
-                             res.topic = "status";
+                             res.topic = "counters";
                              res.format = "uint32";
                              res.unit = "";
                              res.channel = "Digital channel 6"
@@ -1336,7 +1336,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14200+200,
+                                 address: +200,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -1354,7 +1354,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14199+240,
+                                 address: 14200+240,
                                  quantity: 1,
                              };
                              res.topic = "status";
@@ -1367,10 +1367,10 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14211+240,
+                                 address: 14212+240,
                                  quantity: 6,
                              };
-                             res.topic = "status";
+                             res.topic = "counters";
                              res.format = "uint32";
                              res.unit = "";
                              res.channel = "Digital channel 7"
@@ -1380,7 +1380,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14200+240,
+                                 address: +240,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -1402,7 +1402,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14199,
+                                 address: 14200,
                                  quantity: 1,
                              };
                              res.topic = "status";
@@ -1415,10 +1415,10 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14211,
+                                 address: 14212,
                                  quantity: 6,
                              };
-                             res.topic = "status";
+                             res.topic = "counters";
                              res.format = "uint32";
                              res.unit = "";
                              res.channel = "Digital channel 1"
@@ -1428,7 +1428,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14200,
+                                 address: ,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -1445,7 +1445,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14199+40,
+                                 address: 14200+40,
                                  quantity: 1,
                              };
                              res.topic = "status";
@@ -1458,10 +1458,10 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14211+40,
+                                 address: 14212+40,
                                  quantity: 6,
                              };
-                             res.topic = "status";
+                             res.topic = "counters";
                              res.format = "uint32";
                              res.unit = "";
                              res.channel = "Digital channel 2"
@@ -1471,7 +1471,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14200+40,
+                                 address: +40,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -1489,7 +1489,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14199+80,
+                                 address: 14200+80,
                                  quantity: 1,
                              };
                              res.topic = "status";
@@ -1502,10 +1502,10 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14211+80,
+                                 address: 14212+80,
                                  quantity: 6,
                              };
-                             res.topic = "status";
+                             res.topic = "counters";
                              res.format = "uint32";
                              res.unit = "";
                              res.channel = "Digital channel 3"
@@ -1515,7 +1515,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14200+80,
+                                 address: +80,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -1533,7 +1533,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14199+120,
+                                 address: 14200+120,
                                  quantity: 1,
                              };
                              res.topic = "status";
@@ -1546,10 +1546,10 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14211+120,
+                                 address: 14212+120,
                                  quantity: 6,
                              };
-                             res.topic = "status";
+                             res.topic = "counters";
                              res.format = "uint32";
                              res.unit = "";
                              res.channel = "Digital channel 4"
@@ -1559,7 +1559,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14200+120,
+                                 address: +120,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -1577,7 +1577,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14199+160,
+                                 address: 14200+160,
                                  quantity: 1,
                              };
                              res.topic = "status";
@@ -1590,10 +1590,10 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14211+160,
+                                 address: 14212+160,
                                  quantity: 6,
                              };
-                             res.topic = "status";
+                             res.topic = "counters";
                              res.format = "uint32";
                              res.unit = "";
                              res.channel = "Digital channel 5"
@@ -1603,7 +1603,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14200+160,
+                                 address: +160,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -1621,7 +1621,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14199+200,
+                                 address: 14200+200,
                                  quantity: 1,
                              };
                              res.topic = "status";
@@ -1634,10 +1634,10 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14211+200,
+                                 address: 14212+200,
                                  quantity: 6,
                              };
-                             res.topic = "status";
+                             res.topic = "counters";
                              res.format = "uint32";
                              res.unit = "";
                              res.channel = "Digital channel 6"
@@ -1647,7 +1647,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14200+200,
+                                 address: +200,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -1665,7 +1665,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14199+240,
+                                 address: 14200+240,
                                  quantity: 1,
                              };
                              res.topic = "status";
@@ -1678,10 +1678,10 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14211+240,
+                                 address: 14212+240,
                                  quantity: 6,
                              };
-                             res.topic = "status";
+                             res.topic = "counters";
                              res.format = "uint32";
                              res.unit = "";
                              res.channel = "Digital channel 7"
@@ -1691,7 +1691,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: 14200+240,
+                                 address: +240,
                                  quantity: 1,
                              };
                              res.topic = "commands";
