@@ -132,7 +132,7 @@ module.exports = function(RED) {
                 // Smartlink status
                    if(msg.topic == "status"){
                    
-                      msg.payload = "";
+                      // msg.payload = "";
                    
                       if(msg.model == "iof+sd24" || msg.model == "of+sd24" || msg.model == "rca-ic60-ti24"){
                       
