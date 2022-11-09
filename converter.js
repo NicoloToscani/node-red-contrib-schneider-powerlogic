@@ -155,7 +155,7 @@ module.exports = function(RED) {
                          
                          else if(msg.payload.status == 3){
                          
-                            msg.payload.status_desc = "Open";
+                            msg.payload.status_desc = "Close";
                          
                          }
                          
@@ -183,7 +183,7 @@ module.exports = function(RED) {
                          
                          else if(msg.payload.status == 3){
                          
-                            msg.payload.status_desc = "Open";
+                            msg.payload.status_desc = "Close";
                          
                          }
                      
@@ -210,7 +210,7 @@ module.exports = function(RED) {
                          
                          else if(msg.payload.status == 3){
                          
-                            msg.payload.status_desc = "Open";
+                            msg.payload.status_desc = "Close";
                          
                          }           
                       
