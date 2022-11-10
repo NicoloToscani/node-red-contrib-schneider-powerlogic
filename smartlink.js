@@ -539,7 +539,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: +40,
+                                 address: 14201+40,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -583,7 +583,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: +80,
+                                 address: 14201+80,
                                  quantity: 1,
                              };
                              res.topic = "commands";
