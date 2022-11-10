@@ -143,19 +143,19 @@ module.exports = function(RED) {
                          
                          if(msg.payload.status == 0){
                          
-                            msg.payload.status_desc = "Trip";
+                            msg.payload.status_descr = "Trip";
                          
                          }
                          
                          else if(msg.payload.status == 2){
                          
-                            msg.payload.status_desc = "Open";
+                            msg.payload.status_descr = "Open";
                          
                          }
                          
                          else if(msg.payload.status == 3){
                          
-                            msg.payload.status_desc = "Close";
+                            msg.payload.status_descr = "Close";
                          
                          }
                          
@@ -171,19 +171,19 @@ module.exports = function(RED) {
                          
                          if(msg.payload.status == 0){
                          
-                            msg.payload.status_desc = "Trip";
+                            msg.payload.status_descr = "Fault";
                          
                          }
                          
                          else if(msg.payload.status == 2){
                          
-                            msg.payload.status_desc = "Open";
+                            msg.payload.status_descr = "Open";
                          
                          }
                          
                          else if(msg.payload.status == 3){
                          
-                            msg.payload.status_desc = "Close";
+                            msg.payload.status_descr = "Close";
                          
                          }
                      
@@ -198,19 +198,19 @@ module.exports = function(RED) {
                          
                          if(msg.payload.status == 0){
                          
-                            msg.payload.status_desc = "Trip";
+                            msg.payload.status_descr = "Handle in OFF position";
                          
                          }
                          
                          else if(msg.payload.status == 2){
                          
-                            msg.payload.status_desc = "Open";
+                            msg.payload.status_descr = "Open";
                          
                          }
                          
                          else if(msg.payload.status == 3){
                          
-                            msg.payload.status_desc = "Close";
+                            msg.payload.status_descr = "Close";
                          
                          }           
                       

@@ -494,9 +494,9 @@ module.exports = function(RED) {
                          break;
                          case "commands":
                              res.payload = {
-                                 fc: 3,
+                                 fc: 6,
                                  unitid: settings.unitId,
-                                 address: ,
+                                 address: 14201,
                                  quantity: 1,
                              };
                              res.topic = "commands";
