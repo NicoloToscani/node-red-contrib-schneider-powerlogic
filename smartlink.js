@@ -627,7 +627,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: +120,
+                                 address: 14201+120,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -671,7 +671,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: +160,
+                                 address: 14201+160,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -715,7 +715,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: +200,
+                                 address: 14201+200,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -759,7 +759,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: +240,
+                                 address: 14201+240,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -806,7 +806,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: ,
+                                 address: 14201,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -849,7 +849,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: +40,
+                                 address: 14201+40,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -893,7 +893,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: +80,
+                                 address: 14201+80,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -937,7 +937,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: +120,
+                                 address: 14201+120,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -981,7 +981,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: +160,
+                                 address: 14201+160,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -1025,7 +1025,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: +200,
+                                 address: 14201+200,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -1069,7 +1069,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: +240,
+                                 address: 14201+240,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -1117,7 +1117,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: ,
+                                 address: 14201,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -1160,7 +1160,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: +40,
+                                 address: 14201+40,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -1204,7 +1204,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: +80,
+                                 address: 14201+80,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -1248,7 +1248,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: +120,
+                                 address: 14201+120,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -1292,7 +1292,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: +160,
+                                 address: 14201+160,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -1336,7 +1336,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: +200,
+                                 address: 14201+200,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -1380,7 +1380,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: +240,
+                                 address: 14201+240,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -1428,7 +1428,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: ,
+                                 address: 14201,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -1471,7 +1471,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: +40,
+                                 address: 14201+40,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -1515,7 +1515,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: +80,
+                                 address: 14201+80,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -1559,7 +1559,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: +120,
+                                 address: 14201+120,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -1603,7 +1603,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: +160,
+                                 address: 14201+160,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -1647,7 +1647,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: +200,
+                                 address: 14201+200,
                                  quantity: 1,
                              };
                              res.topic = "commands";
@@ -1691,7 +1691,7 @@ module.exports = function(RED) {
                              res.payload = {
                                  fc: 3,
                                  unitid: settings.unitId,
-                                 address: +240,
+                                 address: 14201+240,
                                  quantity: 1,
                              };
                              res.topic = "commands";
