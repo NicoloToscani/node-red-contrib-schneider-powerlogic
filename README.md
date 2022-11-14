@@ -257,6 +257,11 @@ List of **iEM3000** meter data:
 |  Number of contactor opening/closing cycle         |                       | Uint32        | 
 |  Load operating time for an NO contactor           | Hours                 | Uint32        |
 
+| Orders                                             | Units                 | Type          | 
+| -------------------------------------------------- | --------------------- | ------------- | 
+|  Deactive contactor coil                           |                       | Bitmap        |
+|  Active contactor coil                             |                       | Bitmap        |
+
 **iATL24 Auxiliary for iTL Impulse Relay**
 
 | Status                                             | Units                 | Type          | 
@@ -268,6 +273,11 @@ List of **iEM3000** meter data:
 | -------------------------------------------------- | --------------------- | ------------- | 
 |  Number of impulse relay opening/close cycles      |                       | Uint32        | 
 |  Load operating time                               | Hours                 | Uint32        |
+
+| Orders                                             | Units                 | Type          | 
+| -------------------------------------------------- | --------------------- | ------------- | 
+|  Impulse relay contact opening                     |                       | Bitmap        |
+|  Impulse relay contact closing                     |                       | Bitmap        |
 
 **Acti9 RCA iC60 Remote Control with Ti24 Interface**
 
@@ -282,7 +292,12 @@ List of **iEM3000** meter data:
 |  Number of trippings                               |                       | Uint32        |
 |  Load operating time                               | Hours                 | Uint32        |
 
-**Acti9 Reflex iC60 Integrated Control Circuit Breaker With Ti24 Interface**
+| Orders                                             | Units                 | Type          | 
+| -------------------------------------------------- | --------------------- | ------------- | 
+|  Activation of the open order                      |                       | Bitmap        |
+|  Activation of the close order                     |                       | Bitmap        |
+
+**Acti9 Reflex iC60 Integrated Control Circuit Breaker with Ti24 Interface**
 
 | Status                                             | Units                 | Type          | 
 | -------------------------------------------------- | --------------------- | ------------- | 
@@ -295,12 +310,20 @@ List of **iEM3000** meter data:
 |  Number of trippings                               |                       | Uint32        |
 |  Load operating time                               | Hours                 | Uint32        |
 
+| Orders                                             | Units                 | Type          | 
+| -------------------------------------------------- | --------------------- | ------------- | 
+|  Activation of the open order                      |                       | Bitmap        |
+|  Activation of the close order                     |                       | Bitmap        |
+
 
 ### Meter data 
 ![data-config](docs/data-config.png)
 
-### Sample flow
+### Sample Measure flow
 ![sample-flow](docs/sample-flow.png)
+
+### Sample Order flow
+![sample-order-flow](docs/sample-flow.png)
 
 ## Equipment compatibility
 
