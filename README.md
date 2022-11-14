@@ -323,7 +323,7 @@ List of **iEM3000** meter data:
 ![sample-flow](docs/sample-flow.png)
 
 ### Sample Order flow
-![sample-order-flow](docs/sample-flow.png)
+![sample-order-flow](docs/sample-order-flow.png)
 
 ## Equipment compatibility
 
