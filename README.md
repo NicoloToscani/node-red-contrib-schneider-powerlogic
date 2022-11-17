@@ -11,20 +11,24 @@ Alternatively, run the following command in your Node-RED user directory - typic
 
 ## How to use
 
-### meter node
+### meter node 
 Use the `pm3000`, `pm5000`, `iem3000`, `powertag` or `smartlink` node to configure which information you want to request from the gateway.
 
-Wire the output of the `pm3000`, `pm5000`, `iem3000` or `powertag` to the input of the `Modbus Flex Getter` from 'node-red-contrib-modbus' modules.
+Wire the output of the `pm3000`, `pm5000`, `iem3000`, `powertag` or `smartlink` to the input of the `Modbus Flex Getter` from 'node-red-contrib-modbus' modules.
 
 Enable check box `Keep Msg Properties` in the `Modbus Flex Getter` properties.
 
+With `smartlink` node it's possible to send commands using `Modbus Flex Write` from 'node-red-contrib-modbus' modules.
+
 ### converter node
-Use the `converter` node to convert the values from the modbus response into human readable numbers.
+Use the `converter` node to prepare data for further use.
 
 Wire the second output of the `Modbus Flex Getter` to the input of the `converter`.
 
 ## Usage
+### Example flow
 
+## Meters data
 ### PowerLogic series
 List of **PM3000/PM5000** meter data:
 
@@ -217,7 +221,7 @@ List of **iEM3000** meter data:
 |  Damand total active power                         | Wh                    | Float32       |
 |  Maximum demand total active power                 | Wh                    | Float32       |
 
-### Acti 9 Smartlink
+### Acti9 Smartlink
 
 **iOF+SD24**
 
@@ -319,6 +323,9 @@ List of **iEM3000** meter data:
 ### Meter data 
 ![data-config](docs/data-config.png)
 
+### Order data 
+![control-config](docs/control-config.png)
+
 ### Sample Measure flow
 ![sample-flow](docs/sample-flow.png)
 
@@ -330,4 +337,7 @@ List of **iEM3000** meter data:
 These modules has been developed and tested on:
 + PowerLogic PM3250
 + PowerLogic PM5100
++ PowerLogic PM5100
++ Acti9 PowerTag Link
++ Acti9 Smartlink
 + Ethernet Gateway Link150
