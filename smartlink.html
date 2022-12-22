@@ -22,77 +22,291 @@
             <!--Previous data set-->
             const myData = this.data;
             
-            $("#node-input-device").on("change",function() {
+            // Local mode selected
+            localMode = this.mode;
+            
+            <!--Mode selection-->
+            $("#node-input-mode").on("change",function() {                                                                             
                 
                 if (this.value === "") {
-                    $("#node-input-data-iofsd24").hide();
-                    $("#node-input-data-ofsd24").hide();
-                    $("#node-input-data-iact24").hide();
-                    $("#node-input-data-iatl24").hide();
-                    $("#node-input-data-rcaic60ti24").hide();
-                    $("#node-input-data-refelxic60ti24").hide();
+                
+                   console.log('Mode: ' + "" );
+                
                 } 
                 
-                else if (this.value === "iof+sd24") {
-                    $("#node-input-data-iofsd24").show();
-                    $("#node-input-data-ofsd24").hide();
-                    $("#node-input-data-iact24").hide();
-                    $("#node-input-data-iatl24").hide();
-                    $("#node-input-data-rcaic60ti24").hide();
-                    $("#node-input-data-refelxic60ti24").hide();
-     
-                    $("#node-input-data-iofsd24 option[value=" +  myData + "]").attr("selected", true); 
+                else if (this.value === "read") {
+                
+                   // console.log('Mode: ' + this.value );
+                   
+                   $("#node-input-device option[value='iof+sd24']").attr('disabled', false);
+                   $("#node-input-device option[value='of+sd24']").attr('disabled', false);
+                   
+                   localMode = this.value;
+                
                 } 
-                else if (this.value === "of+sd24") {
-                    $("#node-input-data-iofsd24").hide();
-                    $("#node-input-data-ofsd24").show();
-                    $("#node-input-data-iact24").hide();
-                    $("#node-input-data-iatl24").hide();
-                    $("#node-input-data-rcaic60ti24").hide();
-                    $("#node-input-data-refelxic60ti24").hide();
+                
+                else if (this.value === "write") {
+                
+                   // console.log('Mode: ' + this.value );
+                   
+                   $("#node-input-device option[value='iof+sd24']").attr('disabled', true);
+                   $("#node-input-device option[value='of+sd24']").attr('disabled', true);
+                   
+                   localMode = this.value;
+                
+                } 
                     
-                    $("#node-input-data-iofsd24 option[value=" +  myData + "]").attr("selected", true);  
-                } 
-                else if (this.value === "iact24") {
-                    $("#node-input-data-iofsd24").hide();
-                    $("#node-input-data-ofsd24").hide();
-                    $("#node-input-data-iact24").show();
-                    $("#node-input-data-iatl24").hide();
-                    $("#node-input-data-rcaic60ti24").hide();
-                    $("#node-input-data-refelxic60ti24").hide();
-                    
-                    $("#node-input-data-iact24 option[value=" +  myData + "]").attr("selected", true);
-                } 
-                else if (this.value == "iatl24") {
-                    $("#node-input-data-iofsd24").hide();
-                    $("#node-input-data-ofsd24").hide();
-                    $("#node-input-data-iact24").hide();
-                    $("#node-input-data-iatl24").show();
-                    $("#node-input-data-rcaic60ti24").hide();
-                    $("#node-input-data-refelxic60ti24").hide();
-                    
-                    $("#node-input-data-iatl24 option[value=" +  myData + "]").attr("selected", true);
-                } 
-                else if (this.value == "rca-ic60-ti24") {
-                    $("#node-input-data-iofsd24").hide();
-                    $("#node-input-data-ofsd24").hide();
-                    $("#node-input-data-iact24").hide();
-                    $("#node-input-data-iatl24").hide();
-                    $("#node-input-data-rcaic60ti24").show();
-                    $("#node-input-data-refelxic60ti24").hide();
-                    
-                    $("#node-input-data-rcaic60ti24 option[value=" +  myData + "]").attr("selected", true);
-                } 
-                else if (this.value == "refelx-ic60-ti24") {
-                    $("#node-input-data-iofsd24").hide();
-                    $("#node-input-data-ofsd24").hide();
-                    $("#node-input-data-iact24").hide();
-                    $("#node-input-data-iatl24").hide();
-                    $("#node-input-data-rcaic60ti24").hide();
-                    $("#node-input-data-refelxic60ti24").show();
-                    
-                    $("#node-input-data-refelxic60ti24 option[value=" +  myData + "]").attr("selected", true);   
-                } 
+            }).trigger("change");
+            
+            
+            
+            $("#node-input-device").on("change",function() {
+                
+                // Read mode
+                if(localMode == "read"){
+                
+                   console.log('Select measure menu in read mode');
+                
+		        if (this.value === "") {
+		            $("#node-input-data-iofsd24").hide();
+		            $("#node-input-data-ofsd24").hide();
+		            $("#node-input-data-iact24").hide();
+		            $("#node-input-data-iatl24").hide();
+		            $("#node-input-data-rcaic60ti24").hide();
+		            $("#node-input-data-refelxic60ti24").hide();
+		            
+		            $("#node-input-data-iact24-command").hide();
+		            $("#node-input-data-iatl24-command").hide();
+		            $("#node-input-data-rcaic60ti24-command").hide();
+		            $("#node-input-data-refelxic60ti24-command").hide();
+		        } 
+		        
+		        else if (this.value === "iof+sd24") {
+		            $("#node-input-data-iofsd24").show();
+		            $("#node-input-data-ofsd24").hide();
+		            $("#node-input-data-iact24").hide();
+		            $("#node-input-data-iatl24").hide();
+		            $("#node-input-data-rcaic60ti24").hide();
+		            $("#node-input-data-refelxic60ti24").hide();
+		            
+		            $("#node-input-data-iact24-command").hide();
+		            $("#node-input-data-iatl24-command").hide();
+		            $("#node-input-data-rcaic60ti24-command").hide();
+		            $("#node-input-data-refelxic60ti24-command").hide();
+	     
+		            $("#node-input-data-iofsd24 option[value=" +  myData + "]").attr("selected", true); 
+		        } 
+		        else if (this.value === "of+sd24") {
+		            $("#node-input-data-iofsd24").hide();
+		            $("#node-input-data-ofsd24").show();
+		            $("#node-input-data-iact24").hide();
+		            $("#node-input-data-iatl24").hide();
+		            $("#node-input-data-rcaic60ti24").hide();
+		            $("#node-input-data-refelxic60ti24").hide();
+		            
+		            $("#node-input-data-iact24-command").hide();
+		            $("#node-input-data-iatl24-command").hide();
+		            $("#node-input-data-rcaic60ti24-command").hide();
+		            $("#node-input-data-refelxic60ti24-command").hide();
+		            
+		            $("#node-input-data-iofsd24 option[value=" +  myData + "]").attr("selected", true);  
+		        } 
+		        else if (this.value === "iact24") {
+		            $("#node-input-data-iofsd24").hide();
+		            $("#node-input-data-ofsd24").hide();
+		            $("#node-input-data-iact24").show();
+		            $("#node-input-data-iatl24").hide();
+		            $("#node-input-data-rcaic60ti24").hide();
+		            $("#node-input-data-refelxic60ti24").hide();
+		            
+		            $("#node-input-data-iact24-command").hide();
+		            $("#node-input-data-iatl24-command").hide();
+		            $("#node-input-data-rcaic60ti24-command").hide();
+		            $("#node-input-data-refelxic60ti24-command").hide();
+		            
+		            $("#node-input-data-iact24 option[value=" +  myData + "]").attr("selected", true);
+		        } 
+		        else if (this.value == "iatl24") {
+		            $("#node-input-data-iofsd24").hide();
+		            $("#node-input-data-ofsd24").hide();
+		            $("#node-input-data-iact24").hide();
+		            $("#node-input-data-iatl24").show();
+		            $("#node-input-data-rcaic60ti24").hide();
+		            $("#node-input-data-refelxic60ti24").hide();
+		            
+		            $("#node-input-data-iact24-command").hide();
+		            $("#node-input-data-iatl24-command").hide();
+		            $("#node-input-data-rcaic60ti24-command").hide();
+		            $("#node-input-data-refelxic60ti24-command").hide();
+		            
+		            $("#node-input-data-iatl24 option[value=" +  myData + "]").attr("selected", true);
+		        } 
+		        else if (this.value == "rca-ic60-ti24") {
+		            $("#node-input-data-iofsd24").hide();
+		            $("#node-input-data-ofsd24").hide();
+		            $("#node-input-data-iact24").hide();
+		            $("#node-input-data-iatl24").hide();
+		            $("#node-input-data-rcaic60ti24").show();
+		            $("#node-input-data-refelxic60ti24").hide();
+		            
+		            $("#node-input-data-iact24-command").hide();
+		            $("#node-input-data-iatl24-command").hide();
+		            $("#node-input-data-rcaic60ti24-command").hide();
+		            $("#node-input-data-refelxic60ti24-command").hide();
+		            
+		            $("#node-input-data-rcaic60ti24 option[value=" +  myData + "]").attr("selected", true);
+		        } 
+		        else if (this.value == "refelx-ic60-ti24") {
+		            $("#node-input-data-iofsd24").hide();
+		            $("#node-input-data-ofsd24").hide();
+		            $("#node-input-data-iact24").hide();
+		            $("#node-input-data-iatl24").hide();
+		            $("#node-input-data-rcaic60ti24").hide();
+		            $("#node-input-data-refelxic60ti24").show();
+		            
+		            $("#node-input-data-iact24-command").hide();
+		            $("#node-input-data-iatl24-command").hide();
+		            $("#node-input-data-rcaic60ti24-command").hide();
+		            $("#node-input-data-refelxic60ti24-command").hide();
+		            
+		            $("#node-input-data-refelxic60ti24 option[value=" +  myData + "]").attr("selected", true);   
+		        } 
+                
+                }
+                
+                
+                // Write mode
+                else if(localMode == "write"){
+                
+                   console.log('Select measure menu in write mode');
+                   
+                   if (this.value === "") {
+		            $("#node-input-data-iofsd24").hide();
+		            $("#node-input-data-ofsd24").hide();
+		            $("#node-input-data-iact24").hide();
+		            $("#node-input-data-iatl24").hide();
+		            $("#node-input-data-rcaic60ti24").hide();
+		            $("#node-input-data-refelxic60ti24").hide();
+		            
+		            $("#node-input-data-iact24-command").hide();
+		            $("#node-input-data-iatl24-command").hide();
+		            $("#node-input-data-rcaic60ti24-command").hide();
+		            $("#node-input-data-refelxic60ti24-command").hide();
+		        } 
+		        
+		        else if (this.value === "iof+sd24") {
+		            $("#node-input-data-iofsd24").hide();
+		            $("#node-input-data-ofsd24").hide();
+		            $("#node-input-data-iact24").hide();
+		            $("#node-input-data-iatl24").hide();
+		            $("#node-input-data-rcaic60ti24").hide();
+		            $("#node-input-data-refelxic60ti24").hide();
+		            
+		            $("#node-input-data-iact24-command").hide();
+		            $("#node-input-data-iatl24-command").hide();
+		            $("#node-input-data-rcaic60ti24-command").hide();
+		            $("#node-input-data-refelxic60ti24-command").hide();
+	     
+		            $("#node-input-data-iofsd24 option[value=" +  myData + "]").attr("selected", true); 
+		        } 
+		        else if (this.value === "of+sd24") {
+		            $("#node-input-data-iofsd24").hide();
+		            $("#node-input-data-ofsd24").hide();
+		            $("#node-input-data-iact24").hide();
+		            $("#node-input-data-iatl24").hide();
+		            $("#node-input-data-rcaic60ti24").hide();
+		            $("#node-input-data-refelxic60ti24").hide();
+		            
+		            $("#node-input-data-iact24-command").hide();
+		            $("#node-input-data-iatl24-command").hide();
+		            $("#node-input-data-rcaic60ti24-command").hide();
+		            $("#node-input-data-refelxic60ti24-command").hide();
+		            
+		            $("#node-input-data-iofsd24 option[value=" +  myData + "]").attr("selected", true);  
+		        } 
+		        else if (this.value === "iact24") {
+		            $("#node-input-data-iofsd24").hide();
+		            $("#node-input-data-ofsd24").hide();
+		            $("#node-input-data-iact24").hide();
+		            $("#node-input-data-iatl24").hide();
+		            $("#node-input-data-rcaic60ti24").hide();
+		            $("#node-input-data-refelxic60ti24").hide();
+		            
+		            $("#node-input-data-iact24-command").show();
+		            $("#node-input-data-iatl24-command").hide();
+		            $("#node-input-data-rcaic60ti24-command").hide();
+		            $("#node-input-data-refelxic60ti24-command").hide();
+		            
+		            $("#node-input-data-iact24-command option[value=" +  myData + "]").attr("selected", true);
+		        } 
+		        else if (this.value == "iatl24") {
+		            $("#node-input-data-iofsd24").hide();
+		            $("#node-input-data-ofsd24").hide();
+		            $("#node-input-data-iact24").hide();
+		            $("#node-input-data-iatl24").hide();
+		            $("#node-input-data-rcaic60ti24").hide();
+		            $("#node-input-data-refelxic60ti24").hide();
+		            
+		            $("#node-input-data-iact24-command").hide();
+		            $("#node-input-data-iatl24-command").show();
+		            $("#node-input-data-rcaic60ti24-command").hide();
+		            $("#node-input-data-refelxic60ti24-command").hide();
+		            
+		            $("#node-input-data-iatl24-command option[value=" +  myData + "]").attr("selected", true);
+		        } 
+		        else if (this.value == "rca-ic60-ti24") {
+		            $("#node-input-data-iofsd24").hide();
+		            $("#node-input-data-ofsd24").hide();
+		            $("#node-input-data-iact24").hide();
+		            $("#node-input-data-iatl24").hide();
+		            $("#node-input-data-rcaic60ti24").hide();
+		            $("#node-input-data-refelxic60ti24").hide();
+		            
+		            $("#node-input-data-iact24-command").hide();
+		            $("#node-input-data-iatl24-command").hide();
+		            $("#node-input-data-rcaic60ti24-command").show();
+		            $("#node-input-data-refelxic60ti24-command").hide();
+		            
+		            $("#node-input-data-rcaic60ti24-command option[value=" +  myData + "]").attr("selected", true);
+		        } 
+		        else if (this.value == "refelx-ic60-ti24") {
+		            $("#node-input-data-iofsd24").hide();
+		            $("#node-input-data-ofsd24").hide();
+		            $("#node-input-data-iact24").hide();
+		            $("#node-input-data-iatl24").hide();
+		            $("#node-input-data-rcaic60ti24").hide();
+		            $("#node-input-data-refelxic60ti24").hide();
+		            
+		            $("#node-input-data-iact24-command").hide();
+		            $("#node-input-data-iatl24-command").hide();
+		            $("#node-input-data-rcaic60ti24-command").hide();
+		            $("#node-input-data-refelxic60ti24-command").show();
+		            
+		            $("#node-input-data-refelxic60ti24-command option[value=" +  myData + "]").attr("selected", true);   
+		        } 
+                
+                
+                }
+                
+                // Undefinied mode
+                else if(localMode == "") {
+                
+                   console.log('Select measure menu in undefiened mode');
+                   
+                           $("#node-input-data-iofsd24").hide();
+		            $("#node-input-data-ofsd24").hide();
+		            $("#node-input-data-iact24").hide();
+		            $("#node-input-data-iatl24").hide();
+		            $("#node-input-data-rcaic60ti24").hide();
+		            $("#node-input-data-refelxic60ti24").hide();
+		            
+		            
+		            $("#node-input-data-iact24-command").hide();
+		            $("#node-input-data-iatl24-command").hide();
+		            $("#node-input-data-rcaic60ti24-command").hide();
+		            $("#node-input-data-refelxic60ti24-command").hide();
+                
+                }
                     
             }).trigger("change");
             
@@ -106,71 +320,131 @@
              let deviceType = $("#node-input-device option:selected");
              // console.log('oneditsave');
              
-             <!--iOF+SD24-->
-             if(deviceType.val() == "iof+sd24") {
-                        
-                let dataValue = $("#node-input-data-iofsd24 option:selected");
-                this.data = dataValue.val();
-                        
-                // console.log('deviceType ' + deviceType.val());
-                // console.log(this.data);
-              
-             } 
              
-             <!-- OF+SD24 -->
-             if(deviceType.val() == "of+sd24") {
-                        
-                let dataValue = $("#node-input-data-ofsd24 option:selected");
-                this.data = dataValue.val();
-                        
-                // console.log('deviceType ' + deviceType.val());
-                // console.log(this.data);
-              
-             }
+             // Check mode type
+             if(localMode == "read"){
+                     
+                     // console.log('oneditsave read');
              
-             <!-- iACT24 -->
-             if(deviceType.val() == "iact24") {
-                        
-                let dataValue = $("#node-input-data-iact24 option:selected");
-                this.data = dataValue.val();
-                        
-                // console.log('deviceType ' + deviceType.val());
-                // console.log(this.data);
-              
-             }
-             
-             <!-- iATL24 -->
-             if(deviceType.val() == "iatl24") {
-                        
-                let dataValue = $("#node-input-data-iatl24 option:selected");
-                this.data = dataValue.val();
-                        
-                // console.log('deviceType ' + deviceType.val());
-                // console.log(this.data);
-              
-             }
-             
-             <!-- RCA iC60 -->
-             if(deviceType.val() == "rca-ic60-ti24") {
-                        
-                let dataValue = $("#node-input-data-rcaic60ti24 option:selected");
-                this.data = dataValue.val();
-                        
-                // console.log('deviceType ' + deviceType.val());
-                // console.log(this.data);
-              
-             }             
+		     <!--iOF+SD24-->
+		     if(deviceType.val() == "iof+sd24") {
+		                
+		        let dataValue = $("#node-input-data-iofsd24 option:selected");
+		        this.data = dataValue.val();
+		                
+		        // console.log('deviceType ' + deviceType.val());
+		        // console.log(this.data);
+		      
+		     } 
+		     
+		     <!-- OF+SD24 -->
+		     if(deviceType.val() == "of+sd24") {
+		                
+		        let dataValue = $("#node-input-data-ofsd24 option:selected");
+		        this.data = dataValue.val();
+		                
+		        // console.log('deviceType ' + deviceType.val());
+		        // console.log(this.data);
+		      
+		     }
+		     
 
-             <!-- Reflex iC60 -->
-             if(deviceType.val() == "refelx-ic60-ti24") {
-                        
-                let dataValue = $("#node-input-data-refelxic60ti24 option:selected");
-                this.data = dataValue.val();
-                        
-                // console.log('deviceType ' + deviceType.val());
-                // console.log(this.data);
-              
-             }
+		     
+		     <!-- iACT24 -->
+		     if(deviceType.val() == "iact24") {
+		                
+		        let dataValue = $("#node-input-data-iact24 option:selected");
+		        this.data = dataValue.val();
+		                
+		        // console.log('deviceType ' + deviceType.val());
+		        // console.log(this.data);
+		      
+		     }
+		     
+		     <!-- iATL24 -->
+		     if(deviceType.val() == "iatl24") {
+		                
+		        let dataValue = $("#node-input-data-iatl24 option:selected");
+		        this.data = dataValue.val();
+		                
+		        // console.log('deviceType ' + deviceType.val());
+		        // console.log(this.data);
+		      
+		     }
+		     
+		     <!-- RCA iC60 -->
+		     if(deviceType.val() == "rca-ic60-ti24") {
+		                
+		        let dataValue = $("#node-input-data-rcaic60ti24 option:selected");
+		        this.data = dataValue.val();
+		                
+		        // console.log('deviceType ' + deviceType.val());
+		        // console.log(this.data);
+		      
+		     }             
+
+		     <!-- Reflex iC60 -->
+		     if(deviceType.val() == "refelx-ic60-ti24") {
+		                
+		        let dataValue = $("#node-input-data-refelxic60ti24 option:selected");
+		        this.data = dataValue.val();
+		                
+		        // console.log('deviceType ' + deviceType.val());
+		        // console.log(this.data);
+		      
+		     }
+             
+           }
+           
+           else if(localMode == "write"){ 
+           
+                    console.log('oneditsave write');
+           		     
+		     <!-- iACT24 -->
+		     if(deviceType.val() == "iact24") {
+		                
+		        let dataValue = $("#node-input-data-iact24-command option:selected");
+		        this.data = dataValue.val();
+		                
+		        // console.log('deviceType ' + deviceType.val());
+		        // console.log(this.data);
+		      
+		     }
+		     
+		     <!-- iATL24 -->
+		     if(deviceType.val() == "iatl24") {
+		                
+		        let dataValue = $("#node-input-data-iatl24-command option:selected");
+		        this.data = dataValue.val();
+		                
+		        // console.log('deviceType ' + deviceType.val());
+		        // console.log(this.data);
+		      
+		     }
+		     
+		     <!-- RCA iC60 -->
+		     if(deviceType.val() == "rca-ic60-ti24") {
+		                
+		        let dataValue = $("#node-input-data-rcaic60ti24-command option:selected");
+		        this.data = dataValue.val();
+		                
+		        // console.log('deviceType ' + deviceType.val());
+		        // console.log(this.data);
+		      
+		     }             
+
+		     <!-- Reflex iC60 -->
+		     if(deviceType.val() == "refelx-ic60-ti24") {
+		                
+		        let dataValue = $("#node-input-data-refelxic60ti24-command option:selected");
+		        this.data = dataValue.val();
+		                
+		        // console.log('deviceType ' + deviceType.val());
+		        // console.log(this.data);
+		      
+		     }
+           
+           }
              
         }
     });
@@ -192,7 +466,7 @@
         <label for="node-input-mode"><i class="icon-tag"></i> Mode</label>
         <select id="node-input-mode" name="node-input-mode">
            <option value="read">Read</option>
-           <option disabled value="write">Write</option>
+           <option value="write">Write</option>
         </select>
     </div>
     
@@ -241,7 +515,6 @@
        <label for="node-input-data-iact24"><i class="icon-list"></i> Measure</label>
        <select id="node-input-data-iact24">
            <option value="status">Status</option>
-           <option value="commands">Commands</option>
            <option value="counters">Counters</option>
        </select>
     </div>
@@ -250,7 +523,6 @@
        <label for="node-input-data-iatl24"><i class="icon-list"></i> Measure</label>
        <select id="node-input-data-iatl24">
            <option value="status">Status</option>
-           <option value="commands">Commands</option>
            <option value="counters">Counters</option>
        </select>
     </div>
@@ -259,7 +531,6 @@
        <label for="node-input-data-rcaic60ti24"><i class="icon-list"></i> Measure</label>
        <select id="node-input-data-rcaic60ti24">
            <option value="status">Status</option>
-           <option value="commands">Commands</option>
            <option value="counters">Counters</option>
        </select>
     </div>
@@ -268,8 +539,39 @@
        <label for="node-input-data-refelxic60ti24"><i class="icon-list"></i> Measure</label>
        <select id="node-input-data-refelxic60ti24">
            <option value="status">Status</option>
-           <option value="commands">Commands</option>
            <option value="counters">Counters</option>
+       </select>
+    </div>
+
+    <div id="node-input-data-iact24-command" class="form-row">
+       <label for="node-input-data-iact24-command"><i class="icon-list"></i> Control</label>
+       <select id="node-input-data-iact24-command">
+           <option value="deactive">Deactive contactor coil</option>
+           <option value="active">Active contactor coil</option>
+       </select>
+    </div>
+    
+    <div id="node-input-data-iatl24-command" class="form-row">
+       <label for="node-input-data-iatl24-command"><i class="icon-list"></i> Control</label>
+       <select id="node-input-data-iatl24-command">
+           <option value="open">Impulse relay contact opening</option>
+           <option value="close">Impulse relay contact closing</option>
+       </select>
+    </div>
+    
+    <div id="node-input-data-rcaic60ti24-command" class="form-row">
+       <label for="node-input-data-rcaic60ti24-command"><i class="icon-list"></i> Control</label>
+       <select id="node-input-data-rcaic60ti24-command">
+           <option value="open">Open</option>
+           <option value="close">Close</option>
+       </select>
+    </div>
+    
+    <div id="node-input-data-refelxic60ti24-command" class="form-row">
+       <label for="node-input-data-refelxic60ti24-command"><i class="icon-list"></i> Control</label>
+       <select id="node-input-data-refelxic60ti24-command">
+           <option value="open">Open</option>
+           <option value="close">Close</option>
        </select>
     </div>
        

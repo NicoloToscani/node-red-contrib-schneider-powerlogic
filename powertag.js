@@ -50,7 +50,7 @@ module.exports = function(RED) {
                 res.payload = {
                     fc: 3,
                     unitid: settings.unitId,
-                    address: 3004,
+                    address: 3003,
                     quantity: 2,
                     };
                 res.topic = "rms-current-phase-c";
@@ -87,9 +87,9 @@ module.exports = function(RED) {
               case 5:
               case "rms-voltage-c-a":
                 res.payload = {
-                    fc: 3023,
+                    fc: 3,
                     unitid: settings.unitId,
-                    address: 11,
+                    address: 3023,
                     quantity: 2,
                     };
                 res.topic = "rms-voltage-c-a";
