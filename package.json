@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-schneider-powerlogic",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "A Node-RED nodes to read Schneider PowerLogic series over Modbus TCP/IP.",
   "author": "Nicolò Toscani",
   "license": "MIT",
@@ -22,13 +22,7 @@
     "node-red",
     "schneider",
     "pm3000",
-    "pm5000",
-    "iem300",
-    "powertag",
-    "smartlink",
-    "energymeter",
-    "link150",
-    "powerlogic"
+    "pm5000"
   ],
   "homepage": "https://github.com/NicoloToscani/node-red-contrib-schneider-powerlogic#readme",
   "repository": {
