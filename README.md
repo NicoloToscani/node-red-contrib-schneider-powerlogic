@@ -118,8 +118,8 @@ List of **PM3000/PM5000** meter data:
 ### Sample Order flow
 ![sample-order-flow](docs/sample-order-flow-ui.png)
 
-## Equipment compatibility
-Compare the values obtained with the measures reported by the installed device and report any bugs such as:
+## Equipment compatibility 
+Compare the values obtained with the measures on the installed device and report any bugs such as:
 + measured value error
 + measured value format
 + unit of measure
