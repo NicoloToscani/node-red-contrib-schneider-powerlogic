@@ -128,7 +128,7 @@ These modules has been developed and tested on:
 + PowerLogic PM3250
 + Ethernet Gateway Link150
 
-Inspired by the wotk of [node-red-contrib-schneider-powertag](https://github.com/OfficineArduinoTorino/node-red-contrib-schneider-powertag)
+Inspired by the work of [node-red-contrib-schneider-powertag](https://github.com/OfficineArduinoTorino/node-red-contrib-schneider-powertag)
 
 
 
