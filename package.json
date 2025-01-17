@@ -6,6 +6,7 @@
   "license": "MIT",
   "node-red": {
     "nodes": {
+      "pm8000": "pm8000.js",
       "pm3000": "pm3000.js",
       "pm5000": "pm5000.js",
       "iem300": "iem3000.js",
@@ -22,7 +23,8 @@
     "node-red",
     "schneider",
     "pm3000",
-    "pm5000"
+    "pm5000",
+    "pm8000"
   ],
   "homepage": "https://github.com/NicoloToscani/node-red-contrib-schneider-powerlogic#readme",
   "repository": {

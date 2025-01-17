@@ -7,12 +7,12 @@ module.exports = function(RED) {
         var node = this;
         
         // Supported models
-        const allowedModels = ["pm3000", "iem3000", "pm5000", "x63", "M250_M630", "f160_rope", "iOF+SD24", "OF+SD24", "iACT24", "iatl24", "rca-ic60-ti24", "refelx-ic60-ti24"]
+        const allowedModels = ["pm3000", "iem3000", "pm5000", "pm8000", "x63", "M250_M630", "f160_rope", "iOF+SD24", "OF+SD24", "iACT24", "iatl24", "rca-ic60-ti24", "refelx-ic60-ti24"]
         
         node.on('input', function(msg) {
         switch(msg.format) {
             case "float32":
-                if(msg.model == "pm3000" || msg.model == "iem3000" || msg.model == "pm5000" || msg.model == "x63" || msg.model == "M250_M630" || msg.model == "f160_rope"){
+                if(msg.model == "pm3000" || msg.model == "iem3000" || msg.model == "pm5000" || msg.model == "pm8000" || msg.model == "x63" || msg.model == "M250_M630" || msg.model == "f160_rope"){
                    msg.payload = msg.payload.buffer.readFloatBE(0,4).toFixed(2);
                 } 
                 
@@ -62,7 +62,7 @@ module.exports = function(RED) {
                  }    
             break;
             case "uint32":
-                if(msg.model == "pm3000" || msg.model == "iem3000" || msg.model == "pm5000" || msg.model == "x63" || msg.model == "M250_M630" || msg.model == "f160_rope"|| msg.model == "iof+sd24" || msg.model == "of+sd24" || msg.model == "iact24" || msg.model == "iatl24" || msg.model == "rca-ic60-ti24" || msg.model == "refelx-ic60-ti24"){
+                if(msg.model == "pm3000" || msg.model == "iem3000" || msg.model == "pm5000" || msg.model == "pm8000" || msg.model == "x63" || msg.model == "M250_M630" || msg.model == "f160_rope"|| msg.model == "iof+sd24" || msg.model == "of+sd24" || msg.model == "iact24" || msg.model == "iatl24" || msg.model == "rca-ic60-ti24" || msg.model == "refelx-ic60-ti24"){
                    
                    // To do
 
@@ -113,14 +113,14 @@ module.exports = function(RED) {
                 node.send(msg);
             break;
             case "int64":
-                if(msg.model == "pm3000" || msg.model == "iem3000" || msg.model == "pm5000" || msg.model == "x63" || msg.model == "M250_M630" || msg.model == "f160_rope"){
+                if(msg.model == "pm3000" || msg.model == "iem3000" || msg.model == "pm5000" || msg.model == "pm8000" || msg.model == "x63" || msg.model == "M250_M630" || msg.model == "f160_rope"){
                 
                    msg.payload = msg.payload.buffer.readBigInt64BE(0);
                 }
                 node.send(msg);
             break;
             case "int16":
-                if(msg.model == "pm3000" || msg.model == "iem3000" || msg.model == "pm5000" || msg.model == "x63" || msg.model == "M250_M630" || msg.model == "f160_rope"){
+                if(msg.model == "pm3000" || msg.model == "iem3000" || msg.model == "pm5000" || msg.model == "pm8000" || msg.model == "x63" || msg.model == "M250_M630" || msg.model == "f160_rope"){
                 
                    msg.payload = msg.payload.buffer.readInt16LE(0);
                 }
